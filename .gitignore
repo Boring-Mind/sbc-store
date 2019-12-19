@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Static templates (HTML,CSS,JS)
+Store-template/
+
+# Secret key
+secret.txt
