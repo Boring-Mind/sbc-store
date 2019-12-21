@@ -134,3 +134,6 @@ temp/
 
 # Secret key
 secret.txt
+
+#Settings file
+settings.ini
