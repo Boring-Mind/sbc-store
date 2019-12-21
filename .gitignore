@@ -130,6 +130,7 @@ dmypy.json
 
 # Static templates (HTML,CSS,JS)
 Store-template/
+temp/
 
 # Secret key
 secret.txt
