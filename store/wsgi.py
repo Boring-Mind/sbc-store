@@ -9,10 +9,10 @@ https://docs.djangoproject.com/en/3.0/howto/deployment/wsgi/
 
 import os
 
-# from decouple import config
 from django.core.wsgi import get_wsgi_application
+from store.settings.base import get_config_type
 
-# DJANGO_SETTINGS_MODULE = config('SETTINGS_PATH')
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'store.settings.development')
+# set path to the current config file
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'store.settings.' + get_config_type())
 
 application = get_wsgi_application()

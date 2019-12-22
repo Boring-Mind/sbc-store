@@ -10,5 +10,6 @@ setup(
 	  install_requires=[
 	  	'docutils>=0.3',
 	  	'django<3.1',
+	  	'python-decouple>=3.3',
 	  ]
 )

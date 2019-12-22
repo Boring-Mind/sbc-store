@@ -8,11 +8,11 @@ https://docs.djangoproject.com/en/3.0/howto/deployment/asgi/
 """
 
 import os
-# from decouple import config
 
 from django.core.asgi import get_asgi_application
+from store.settings.base import get_config_type
 
-# DJANGO_SETTINGS_MODULE = config('SETTINGS_PATH')
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'store.settings.development')
+# set path to the current config file
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'store.settings.' + get_config_type())
 
 application = get_asgi_application()

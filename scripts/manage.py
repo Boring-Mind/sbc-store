@@ -2,10 +2,12 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from store.settings.base import get_config_type
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'store.settings.development')
+    # Set path to the current config file
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'store.settings.' + get_config_type())
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

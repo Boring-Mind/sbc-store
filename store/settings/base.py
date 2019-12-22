@@ -1,5 +1,18 @@
 import os
 from decouple import config
+from django.core.exceptions import ImproperlyConfigured
+
+
+"""Reads type of current configuration from settings.ini,
+   and returns its name"""
+def get_config_type():
+    cur_config = config('CURRENT_CONFIG', default='production')
+    if cur_config in ('development', 'production'):
+        return cur_config
+    else:
+        error_msg = "Set the CURRENT_CONFIG environment variable"
+        raise ImproperlyConfigured(error_msg)
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
