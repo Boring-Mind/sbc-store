@@ -1,4 +1,5 @@
 import os
+import dj_database_url
 from decouple import config
 from django.core.exceptions import ImproperlyConfigured
 
@@ -65,11 +66,12 @@ WSGI_APPLICATION = 'store.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# ToDo: write function, that checks validity of the connection string
+# by regex
+DATABASE_URL = config('DB_URL')
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600)
 }
 
 
