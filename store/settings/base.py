@@ -1,5 +1,6 @@
 import os
 import dj_database_url
+import re
 from decouple import config
 from django.core.exceptions import ImproperlyConfigured
 
@@ -13,6 +14,16 @@ def get_config_type():
     else:
         error_msg = "Set the CURRENT_CONFIG environment variable"
         raise ImproperlyConfigured(error_msg)
+
+""" Checks, that db_url fit into format
+    postgres://USER:PASSWORD@HOST:PORT/"""
+def check_db_url(db_url: str) -> bool:
+    regexp = r'postgres:\/\/\S+?:\S+?@\S+?:(\d{4}|)\/\S+'
+    match = re.search(regexp, db_url)
+    if match is not None:
+        return True
+    else:
+        return False
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -66,9 +77,11 @@ WSGI_APPLICATION = 'store.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# ToDo: write function, that checks validity of the connection string
-# by regex
 DATABASE_URL = config('DB_URL')
+
+if check_db_url(DATABASE_URL) == False:
+    error_msg = "Set the DB_URL environment variable properly"
+    raise ImproperlyConfigured(error_msg)
 
 DATABASES = {
     'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600)
