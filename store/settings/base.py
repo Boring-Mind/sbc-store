@@ -7,7 +7,7 @@ from django.core.exceptions import ImproperlyConfigured
 
 """Reads type of current configuration from settings.ini,
    and returns its name"""
-def get_config_type():
+def get_config_type() -> str:
     cur_config = config('CURRENT_CONFIG', default='production')
     if cur_config in ('development', 'production'):
         return cur_config
@@ -58,8 +58,10 @@ ROOT_URLCONF = 'store.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [
+            os.path.join(BASE_DIR, '..', 'templates'),
+        ],
+        'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -124,3 +126,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, '..', 'static', 'store')]

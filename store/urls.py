@@ -15,8 +15,28 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from store.apps.pages import views
 
 urlpatterns = [
+    path('', views.home_page_view),
+    
     path('admin/', admin.site.urls),
+    
+    path('about/', views.about_view),
+    path('blog/', views.blog_view),
+    path('cart/', views.cart_view),
+    path('checkout/', views.checkout_view),
+    path('contact/', views.contact_view),
+    path('faq/', views.faq_view),
+    path('restore_password/', views.restore_password_view),
+    path('login/', views.login_view),
+    path('my_account/', views.my_account_view),
+    path('register/', views.register_view),
+    path('service/', views.service_view),
+    path('shop/', views.shop_view),
+    path('single_product/', views.single_product_view),
+    path('wishlist/', views.wishlist_view),
+    path('404/', views.page_not_found_view),
+
     # path('site/', include('site.urls')),
 ]
