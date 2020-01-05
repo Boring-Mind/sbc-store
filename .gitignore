@@ -133,3 +133,6 @@ temp/
 
 #Settings file
 settings.ini
+
+#Selenium
+geckodriver.log
