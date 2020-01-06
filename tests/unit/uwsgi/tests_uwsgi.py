@@ -22,12 +22,6 @@ class UWSGITestFirefox(unittest.TestCase):
         )
         subprocess.Popen(bash_command, stdout=subprocess.PIPE, shell=True)
 
-    def tearDown(self):
-        self.browser.quit()
-        bash_command = 'killall -s INT uwsgi'
-        subprocess.Popen(bash_command, stdout=subprocess.PIPE, shell=True)
-        # self.p.kill()
-
     def test_uwsgi_printed_hello_world(self):
         """ uwsgi launches and sends Hello World as HTTP response """
         self.browser.get('http://localhost:8000')
@@ -36,6 +30,11 @@ class UWSGITestFirefox(unittest.TestCase):
             'Hello World',
             self.browser.page_source
         )
+
+    def tearDown(self):
+        self.browser.quit()
+        bash_command = 'killall -s INT uwsgi'
+        subprocess.Popen(bash_command, stdout=subprocess.PIPE, shell=True)
 
 
 class UWSGITestChrome(unittest.TestCase):
@@ -59,12 +58,6 @@ class UWSGITestChrome(unittest.TestCase):
         )
         subprocess.Popen(bash_command, stdout=subprocess.PIPE, shell=True)
 
-    def tearDown(self):
-        self.browser.quit()
-        bash_command = 'killall -s INT uwsgi'
-        subprocess.Popen(bash_command, stdout=subprocess.PIPE, shell=True)
-        # self.p.kill()
-
     def test_uwsgi_printed_hello_world(self):
         """ uwsgi launches and sends Hello World as HTTP response """
         self.browser.get('http://localhost:8000')
@@ -73,6 +66,11 @@ class UWSGITestChrome(unittest.TestCase):
             'Hello World',
             self.browser.page_source
         )
+
+    def tearDown(self):
+        self.browser.quit()
+        bash_command = 'killall -s INT uwsgi'
+        subprocess.Popen(bash_command, stdout=subprocess.PIPE, shell=True)
 
 
 if __name__ == '__main__':
