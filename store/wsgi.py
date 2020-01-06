@@ -13,6 +13,9 @@ from django.core.wsgi import get_wsgi_application
 from store.settings.base import get_config_type
 
 # set path to the current config file
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'store.settings.' + get_config_type())
+os.environ.setdefault(
+    'DJANGO_SETTINGS_MODULE',
+    'store.settings.' + get_config_type()
+)
 
 application = get_wsgi_application()
