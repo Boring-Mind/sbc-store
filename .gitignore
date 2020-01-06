@@ -134,5 +134,5 @@ temp/
 # Settings file
 settings.ini
 
-# Public static files
+# STATIC_ROOT files
 public/static/
