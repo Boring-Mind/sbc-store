@@ -5,9 +5,9 @@ from decouple import config
 from django.core.exceptions import ImproperlyConfigured
 
 
-"""Reads type of current configuration from settings.ini,
-   and returns its name"""
 def get_config_type() -> str:
+    """Reads type of current configuration from settings.ini,
+    and returns its name"""
     cur_config = config('CURRENT_CONFIG', default='production')
     if cur_config in ('development', 'production'):
         return cur_config
@@ -15,22 +15,23 @@ def get_config_type() -> str:
         error_msg = "Set the CURRENT_CONFIG environment variable"
         raise ImproperlyConfigured(error_msg)
 
-""" Checks, that db_url fit into format
+
+def db_url_is_valid(db_url: str) -> bool:
+    """Checks, that db_url fit into format
     postgres://USER:PASSWORD@HOST:PORT/"""
-def check_db_url(db_url: str) -> bool:
     regexp = r'postgres:\/\/\S+?:\S+?@\S+?:(\d{4}|)\/\S+'
     match = re.search(regexp, db_url)
-    if match is not None:
-        return True
-    else:
+    if match is None:
         return False
+    return True
+
 
 # APP_ROOT points to sbc-store/store/store
 # ROOT points to sbc-store/store
 # PUBLIC points to sbc-store/store/public
 PROJECT_APP_ROOT = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 PROJECT_ROOT = os.path.abspath(os.path.dirname(PROJECT_APP_ROOT))
-PUBLIC_ROOT  = os.path.abspath(os.path.join(PROJECT_ROOT, 'public'))
+PUBLIC_ROOT = os.path.abspath(os.path.join(PROJECT_ROOT, 'public'))
 
 
 SECRET_KEY = config('SECRET_KEY')
@@ -84,7 +85,7 @@ WSGI_APPLICATION = 'store.wsgi.application'
 
 DATABASE_URL = config('DB_URL')
 
-if check_db_url(DATABASE_URL) == False:
+if db_url_is_valid(DATABASE_URL) is False:
     error_msg = "Set the DB_URL environment variable properly"
     raise ImproperlyConfigured(error_msg)
 
@@ -137,4 +138,3 @@ MEDIA_ROOT = os.path.join(PUBLIC_ROOT, 'media')
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static', 'store'),
 )
-
