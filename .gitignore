@@ -136,3 +136,10 @@ settings.ini
 
 # STATIC_ROOT files
 public/static/
+
+# NGINX configuration
+nginx.conf
+
+# UWSGI configuration
+uwsgi_conf.ini
+uwsgi_conf_example.ini
