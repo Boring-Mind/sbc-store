@@ -51,10 +51,10 @@
                                         <div class="menu-my-account-container">
                                             <a href="">My Account <i class="ion-ios-arrow-down"></i></a>
                                             <ul>
-                                                <li><a href="my-account">My Account</a></li>
-                                                <li><a href="login">Login</a></li>
-                                                <li><a href="register">Register</a></li>
-                                                <li><a href="checkout">Checkout</a></li>
+                                                <li><a href="{% url 'account' %}">My Account</a></li>
+                                                <li><a href="{% url 'login' %}">Login</a></li>
+                                                <li><a href="{% url 'register' %}">Register</a></li>
+                                                <li><a href="{% url 'checkout' %}">Checkout</a></li>
                                             </ul>
                                         </div>
                                         <div class="switcher">
@@ -124,7 +124,7 @@
                                 <div class="shop-cart-menu pull-right">
                                     <ul>
                                         <li><a href=""><i class="ion-ios-shuffle-strong"></i></a></li>
-                                        <li><a href="wishlist"><i class="ion-android-favorite-outline"></i></a></li>
+                                        <li><a href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a></li>
                                         <li><a href="">
                                             <span class="cart-icon">
                                                 <i class="ion-bag"></i><sup>3</sup>
@@ -141,7 +141,7 @@
                                                             <a href=""><img src="{% static "img/product/1.jpg" %}" alt="Image of Product"></a>
                                                         </div>
                                                         <div class="shop-cart-info">
-                                                            <h5><a href="cart">sport t-shirt men</a></h5>
+                                                            <h5><a href="{% url 'cart' %}">sport t-shirt men</a></h5>
                                                             <span class="price">£515.00</span>
                                                             <span class="quantaty">Qty: 1</span>
                                                             <span class="cart-remove"><a href=""><i class="fa fa-times"></i></a></span>
@@ -155,7 +155,7 @@
                                                             <a href=""><img src="{% static "img/product/2.jpg" %}" alt="Image of Product"></a>
                                                         </div>
                                                         <div class="shop-cart-info">
-                                                            <h5><a href="cart">sport coat amet</a></h5>
+                                                            <h5><a href="{% url 'cart' %}">sport coat amet</a></h5>
                                                             <span class="price">£100.00</span>
                                                             <span class="quantaty">Qty: 1</span>
                                                             <span class="cart-remove"><a href=""><i class="fa fa-times"></i></a></span>
@@ -169,7 +169,7 @@
                                                             <a href=""><img src="{% static "img/product/3.jpg" %}" alt="Image of Product"></a>
                                                         </div>
                                                         <div class="shop-cart-info">
-                                                            <h5><a href="cart">Pellentesque men</a></h5>
+                                                            <h5><a href="{% url 'cart' %}">Pellentesque men</a></h5>
                                                             <span class="price">£265.00</span>
                                                             <span class="quantaty">Qty: 1</span>
                                                             <span class="cart-remove"><a href=""><i class="fa fa-times"></i></a></span>
@@ -184,8 +184,8 @@
                                                 </li>
                                                 <li>
                                                     <div class="shop-cart-btn">
-                                                        <a href="checkout">Checkout</a>
-                                                        <a href="cart" class="pull-right">View Cart</a>
+                                                        <a href="{% url 'checkout' %}">Checkout</a>
+                                                        <a href="{% url 'cart' %}" class="pull-right">View Cart</a>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -206,17 +206,17 @@
                                 <span class="categorie-title">Categories</span>
                                 <nav>
                                     <ul class="categori-menu-list menu-hidden">
-                                        <li><a href="shop"><span><img src="{% static "img/icons/1.png" %}" alt="menu-icon"></span>Electronics<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/1.png" %}" alt="menu-icon"></span>Electronics<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                             <!-- categori Mega-Menu Start -->
                                             <ul class="ht-dropdown megamenu first-megamenu">
                                                 <!-- Single Column Start -->
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Cameras</li>
-                                                        <li><a href="shop">Cords and Cables</a></li>
-                                                        <li><a href="shop">gps accessories</a></li>
-                                                        <li><a href="shop">Microphones</a></li>
-                                                        <li><a href="shop">Wireless Transmitters</a></li>
+                                                        <li><a href="{% url 'shop' %}">Cords and Cables</a></li>
+                                                        <li><a href="{% url 'shop' %}">gps accessories</a></li>
+                                                        <li><a href="{% url 'shop' %}">Microphones</a></li>
+                                                        <li><a href="{% url 'shop' %}">Wireless Transmitters</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
@@ -224,10 +224,10 @@
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Digital Cameras</li>
-                                                        <li><a href="shop">Camera one</a></li>
-                                                        <li><a href="shop">Camera two</a></li>
-                                                        <li><a href="shop">Camera three</a></li>
-                                                        <li><a href="shop">Camera four</a></li>
+                                                        <li><a href="{% url 'shop' %}">Camera one</a></li>
+                                                        <li><a href="{% url 'shop' %}">Camera two</a></li>
+                                                        <li><a href="{% url 'shop' %}">Camera three</a></li>
+                                                        <li><a href="{% url 'shop' %}">Camera four</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
@@ -235,27 +235,27 @@
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Digital Cameras</li>
-                                                        <li><a href="shop">Camera one</a></li>
-                                                        <li><a href="shop">Camera two</a></li>
-                                                        <li><a href="shop">Camera three</a></li>
-                                                        <li><a href="shop">Camera four</a></li>
+                                                        <li><a href="{% url 'shop' %}">Camera one</a></li>
+                                                        <li><a href="{% url 'shop' %}">Camera two</a></li>
+                                                        <li><a href="{% url 'shop' %}">Camera three</a></li>
+                                                        <li><a href="{% url 'shop' %}">Camera four</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
                                             </ul>
                                             <!-- categori Mega-Menu End -->
                                         </li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/2.png" %}" alt="menu-icon"></span>Fashion<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/2.png" %}" alt="menu-icon"></span>Fashion<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                             <!-- categori Mega-Menu Start -->
                                             <ul class="ht-dropdown megamenu megamenu-two">
                                                 <!-- Single Column Start -->
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Men’s Fashion</li>
-                                                        <li><a href="shop">Blazers</a></li>
-                                                        <li><a href="shop">Boots</a></li>
-                                                        <li><a href="shop">pants</a></li>
-                                                        <li><a href="shop">Tops & Tees</a></li>
+                                                        <li><a href="{% url 'shop' %}">Blazers</a></li>
+                                                        <li><a href="{% url 'shop' %}">Boots</a></li>
+                                                        <li><a href="{% url 'shop' %}">pants</a></li>
+                                                        <li><a href="{% url 'shop' %}">Tops & Tees</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
@@ -263,27 +263,27 @@
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Women’s Fashion</li>
-                                                        <li><a href="shop">Bags</a></li>
-                                                        <li><a href="shop">Bottoms</a></li>
-                                                        <li><a href="shop">Shirts</a></li>
-                                                        <li><a href="shop">Tailored</a></li>
+                                                        <li><a href="{% url 'shop' %}">Bags</a></li>
+                                                        <li><a href="{% url 'shop' %}">Bottoms</a></li>
+                                                        <li><a href="{% url 'shop' %}">Shirts</a></li>
+                                                        <li><a href="{% url 'shop' %}">Tailored</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
                                             </ul>
                                             <!-- categori Mega-Menu End -->
                                         </li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/3.png" %}" alt="menu-icon"></span>Home & Kitchen<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/3.png" %}" alt="menu-icon"></span>Home & Kitchen<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                             <!-- categori Mega-Menu Start -->
                                             <ul class="ht-dropdown megamenu megamenu-two">
                                                 <!-- Single Column Start -->
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Large Appliances</li>
-                                                        <li><a href="shop">Armchairs</a></li>
-                                                        <li><a href="shop">Bunk Bed</a></li>
-                                                        <li><a href="shop">Mattress</a></li>
-                                                        <li><a href="shop">Sideboard</a></li>
+                                                        <li><a href="{% url 'shop' %}">Armchairs</a></li>
+                                                        <li><a href="{% url 'shop' %}">Bunk Bed</a></li>
+                                                        <li><a href="{% url 'shop' %}">Mattress</a></li>
+                                                        <li><a href="{% url 'shop' %}">Sideboard</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
@@ -291,17 +291,17 @@
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Small Appliances</li>
-                                                        <li><a href="shop">Bootees Bags</a></li>
-                                                        <li><a href="shop">Jackets</a></li>
-                                                        <li><a href="shop">Shelf</a></li>
-                                                        <li><a href="shop">Shoes</a></li>
+                                                        <li><a href="{% url 'shop' %}">Bootees Bags</a></li>
+                                                        <li><a href="{% url 'shop' %}">Jackets</a></li>
+                                                        <li><a href="{% url 'shop' %}">Shelf</a></li>
+                                                        <li><a href="{% url 'shop' %}">Shoes</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
                                             </ul>
                                             <!-- categori Mega-Menu End -->
                                         </li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/4.png" %}" alt="menu-icon"></span>Phones & Tablets<i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/4.png" %}" alt="menu-icon"></span>Phones & Tablets<i class="fa fa-angle-right" aria-hidden="true"></i>
                                                                     </a>
                                             <!-- categori Mega-Menu Start -->
                                             <ul class="ht-dropdown megamenu megamenu-two">
@@ -309,10 +309,10 @@
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Tablet</li>
-                                                        <li><a href="shop">tablet one</a></li>
-                                                        <li><a href="shop">tablet two</a></li>
-                                                        <li><a href="shop">tablet three</a></li>
-                                                        <li><a href="shop">tablet four</a></li>
+                                                        <li><a href="{% url 'shop' %}">tablet one</a></li>
+                                                        <li><a href="{% url 'shop' %}">tablet two</a></li>
+                                                        <li><a href="{% url 'shop' %}">tablet three</a></li>
+                                                        <li><a href="{% url 'shop' %}">tablet four</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
@@ -320,27 +320,27 @@
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Smartphone</li>
-                                                        <li><a href="shop">phone one</a></li>
-                                                        <li><a href="shop">phone two</a></li>
-                                                        <li><a href="shop">phone three</a></li>
-                                                        <li><a href="shop">phone four</a></li>
+                                                        <li><a href="{% url 'shop' %}">phone one</a></li>
+                                                        <li><a href="{% url 'shop' %}">phone two</a></li>
+                                                        <li><a href="{% url 'shop' %}">phone three</a></li>
+                                                        <li><a href="{% url 'shop' %}">phone four</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
                                             </ul>
                                             <!-- categori Mega-Menu End -->
                                         </li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/5.png" %}" alt="menu-icon"></span>TV & Video<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/5.png" %}" alt="menu-icon"></span>TV & Video<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                             <!-- categori Mega-Menu Start -->
                                             <ul class="ht-dropdown megamenu megamenu-two">
                                                 <!-- Single Column Start -->
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Gaming Desktops</li>
-                                                        <li><a href="shop">Alpha Desktop</a></li>
-                                                        <li><a href="shop">rober Desktop</a></li>
-                                                        <li><a href="shop">Ultra Desktop </a></li>
-                                                        <li><a href="shop">beta desktop</a></li>
+                                                        <li><a href="{% url 'shop' %}">Alpha Desktop</a></li>
+                                                        <li><a href="{% url 'shop' %}">rober Desktop</a></li>
+                                                        <li><a href="{% url 'shop' %}">Ultra Desktop </a></li>
+                                                        <li><a href="{% url 'shop' %}">beta desktop</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
@@ -348,25 +348,25 @@
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Women’s Fashion</li>
-                                                        <li><a href="shop">3D-Capable</a></li>
-                                                        <li><a href="shop">Clearance</a></li>
-                                                        <li><a href="shop">Free Shipping Eligible</a></li>
-                                                        <li><a href="shop">On Sale</a></li>
+                                                        <li><a href="{% url 'shop' %}">3D-Capable</a></li>
+                                                        <li><a href="{% url 'shop' %}">Clearance</a></li>
+                                                        <li><a href="{% url 'shop' %}">Free Shipping Eligible</a></li>
+                                                        <li><a href="{% url 'shop' %}">On Sale</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
                                             </ul>
                                             <!-- categori Mega-Menu End -->
                                         </li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/6.png" %}" alt="menu-icon"></span>Beauty</a>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/6.png" %}" alt="menu-icon"></span>Beauty</a>
                                         </li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/7.png" %}" alt="menu-icon"></span>Sport & tourism</a>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/7.png" %}" alt="menu-icon"></span>Sport & tourism</a>
                                         </li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/8.png" %}" alt="menu-icon"></span>Fruits & Veggies</a></li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/9.png" %}" alt="menu-icon"></span>Computer & Laptop</a></li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/10.png" %}" alt="menu-icon"></span>Meat & Seafood</a></li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/12.png" %}" alt="menu-icon"></span>Samsung</a></li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/11.png" %}" alt="menu-icon"></span>Sanyo</a></li>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/8.png" %}" alt="menu-icon"></span>Fruits & Veggies</a></li>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/9.png" %}" alt="menu-icon"></span>Computer & Laptop</a></li>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/10.png" %}" alt="menu-icon"></span>Meat & Seafood</a></li>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/12.png" %}" alt="menu-icon"></span>Samsung</a></li>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/11.png" %}" alt="menu-icon"></span>Sanyo</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -384,19 +384,19 @@
                                                     <li><a href="index-4">Home Shop 4</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="shop">Shop</a></li>
-                                            <li><a href="blog">Blog</a></li>
-                                            <li><a href="about-us">About Us</a></li>
-                                            <li><a href="contact-us">Contact</a></li>
+                                            <li><a href="{% url 'shop' %}">Shop</a></li>
+                                            <li><a href="{% url 'blog' %}">Blog</a></li>
+                                            <li><a href="{% url 'about' %}">About Us</a></li>
+                                            <li><a href="{% url 'contact' %}">Contact</a></li>
                                             <li><a href="">Features <i class="fa fa-angle-down"></i></a>
                                                 <ul class="megamenu-3-column">
                                                     <li><a href="">Pages</a>
                                                         <ul>
-                                                            <li><a href="about-us">About Us</a></li>
-                                                            <li><a href="contact-us">Contact Us</a></li>
-                                                            <li><a href="service">Services</a></li>
+                                                            <li><a href="{% url 'about' %}">About Us</a></li>
+                                                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                                            <li><a href="{% url 'service' %}">Services</a></li>
                                                             <li><a href="portfolio">Portfolio</a></li>
-                                                            <li><a href="faq">Frequently Questins</a></li>
+                                                            <li><a href="{% url 'faq' %}">Frequently Questins</a></li>
                                                             <li><a href="404">Error 404</a></li>
                                                         </ul>
                                                     </li>
@@ -405,7 +405,7 @@
                                                             <li><a href="blog-no-sidebar">None Sidebar</a></li>
                                                             <li><a href="blog">Sidebar right</a></li>
                                                             <li><a href="single-blog">Image Format</a></li>
-                                                            <li><a href="single-blog-gallery">Gallery Format</a></li>
+                                                            <li><a href="single-blog-gallery' ">Gallery Format</a></li>
                                                             <li><a href="single-blog-audio">Audio Format</a></li>
                                                             <li><a href="single-blog-video">Video Format</a></li>
                                                         </ul>
@@ -438,19 +438,19 @@
                                                         <li><a href="index-4">Home Shop 4</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="shop">Shop</a></li>
-                                                <li><a href="blog">Blog</a></li>
-                                                <li><a href="about-us">About Us</a></li>
-                                                <li><a href="contact-us">Contact</a></li>
+                                                <li><a href="{% url 'shop' %}">Shop</a></li>
+                                                <li><a href="{% url 'blog' %}">Blog</a></li>
+                                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                                <li><a href="{% url 'contact' %}">Contact</a></li>
                                                 <li><a href="">Features</a>
                                                     <ul>
                                                         <li><a href="">Pages</a>
                                                             <ul>
-                                                                <li><a href="about-us">About Us</a></li>
-                                                                <li><a href="service">Services</a></li>
-                                                                <li><a href="http://preview.hasthemes.com/bege-v4/bege/service-2.html">Services Two</a></li>
-                                                                <li><a href="portfolio">Portfolio</a></li>
-                                                                <li><a href="faq">Frequently Questins</a></li>
+                                                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                                                <li><a href="{% url 'service' %}">Services</a></li>
+                                                                <!-- <li><a href="http://preview.hasthemes.com/bege-v4/bege/service-2.html">Services Two</a></li>
+ -->                                                                <li><a href="portfolio">Portfolio</a></li>
+                                                                <li><a href="{% url 'faq' %}">Frequently Questins</a></li>
                                                                 <li><a href="404">Error 404</a></li>
                                                             </ul>
                                                         </li>
@@ -513,7 +513,7 @@
 												<h1 class="hthree">BRIGHTER</h1>
 												<h3>40” SkyHi Smart Package</h3> 
 												<div class="button-1 hover-btn-2">
-													<a href="shop">SHOP NOW</a>
+													<a href="{% url 'shop' %}">SHOP NOW</a>
 												</div>
 											</div>
 										</div>
@@ -527,7 +527,7 @@
 												<h3 class="h3one">Build & Fly</h3>
 												<h3 class="h3two">Your Own drone!</h3>
 												<div class="button-1 hover-btn-1">
-													<a href="shop">SHOP NOW</a>
+													<a href="{% url 'shop' %}">SHOP NOW</a>
 												</div>
 											</div>
 										</div>					
@@ -540,14 +540,14 @@
                         <div class="slider-banner-area col-sm-12">
                             <div class="slider-banner">
                                 <div class="slider-single-banner">
-                                    <a href="shop">
+                                    <a href="{% url 'shop' %}">
                                         <img src="{% static "img/banner/banner1.jpg" %}" alt="Banner">
                                     </a>
                                 </div>
                             </div>
                             <div class="slider-banner">
                                 <div class="slider-single-banner">
-                                    <a href="shop">
+                                    <a href="{% url 'shop' %}">
                                         <img src="{% static "img/banner/banner2.jpg" %}" alt="Banner">
                                     </a>
                                 </div>
@@ -790,7 +790,7 @@
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -834,7 +834,7 @@
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -878,7 +878,7 @@
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -922,7 +922,7 @@
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -960,14 +960,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Donec eu libero</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Donec eu libero</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1004,14 +1004,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Pellentesque posuere</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Pellentesque posuere</a></h2>
                                                     <span class="price">
                                                         $ 45.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1048,14 +1048,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Cras neque metus</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Cras neque metus</a></h2>
                                                     <span class="price">
                                                          $ 70.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1092,14 +1092,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         $ 80.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1168,14 +1168,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1210,14 +1210,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Nulla sed libero</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Nulla sed libero</a></h2>
                                                     <span class="price">
                                                         $ 45.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1254,14 +1254,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Pellentesque posuere</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Pellentesque posuere</a></h2>
                                                     <span class="price">
                                                         $ 100.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1296,14 +1296,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Tincidunt malesuada</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Tincidunt malesuada</a></h2>
                                                     <span class="price">
                                                         <del>$ 80.00</del> $ 50.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1340,14 +1340,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Pellentesque posuere</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Pellentesque posuere</a></h2>
                                                     <span class="price">
                                                         $ 45.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1382,14 +1382,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Kaoreet lobortis</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Kaoreet lobortis</a></h2>
                                                     <span class="price">
                                                         $ 95.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1426,14 +1426,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Aliquam lobortis est</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Aliquam lobortis est</a></h2>
                                                     <span class="price">
                                                         $ 80.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1469,14 +1469,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1513,14 +1513,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Phasellus vel hendrerit</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Phasellus vel hendrerit</a></h2>
                                                     <span class="price">
                                                         $ 55.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1555,14 +1555,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Auctor gravida enim</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Auctor gravida enim</a></h2>
                                                     <span class="price">
                                                         <del>$ 85.00</del> $ 75.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1599,14 +1599,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1641,14 +1641,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1685,14 +1685,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1728,14 +1728,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1772,14 +1772,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1814,14 +1814,14 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
                                                 </div>
                                                 <div class="product-hidden">
                                                     <div class="add-to-cart">
-                                                        <a href="cart">Add to cart</a>
+                                                        <a href="{% url 'cart' %}">Add to cart</a>
                                                     </div>
                                                     <div class="star-actions">
                                                         <div class="product-rattings">
@@ -1853,19 +1853,19 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-5 banner-four-one">
-                            <a href="shop"><img src="{% static "img/banner/ehome1-banner4-1.jpg" %}" alt=""></a>
+                            <a href="{% url 'shop' %}"><img src="{% static "img/banner/ehome1-banner4-1.jpg" %}" alt=""></a>
                         </div>
                         <div class="col-sm-7 banner-four-two">
                             <div class="top-banner">
-                                <a href="shop"><img src="{% static "img/banner/home1-banner4-2.jpg" %}" alt=""></a>
+                                <a href="{% url 'shop' %}"><img src="{% static "img/banner/home1-banner4-2.jpg" %}" alt=""></a>
                             </div>
                             <div class="bottom-banner">
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <a href="shop"><img src="{% static "img/banner/home1-banner4-3.jpg" %}" alt=""></a>
+                                        <a href="{% url 'shop' %}"><img src="{% static "img/banner/home1-banner4-3.jpg" %}" alt=""></a>
                                     </div>
                                     <div class="col-sm-6">
-                                        <a href="shop"><img src="{% static "img/banner/home1-banner4-4.jpg" %}" alt=""></a>
+                                        <a href="{% url 'shop' %}"><img src="{% static "img/banner/home1-banner4-4.jpg" %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1900,7 +1900,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Itaque earum</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Itaque earum</a></h2>
                                                     <span class="price">
                                                         $ 866.00
                                                     </span>
@@ -1913,7 +1913,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1934,7 +1934,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Nostrum exercitationem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Nostrum exercitationem</a></h2>
                                                     <span class="price">
                                                         <del>$ 590.00</del>$ 550.00
                                                     </span>
@@ -1947,7 +1947,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1968,7 +1968,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Consequuntur</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Consequuntur</a></h2>
                                                     <span class="price">
                                                         $ 366.00
                                                     </span>
@@ -1981,7 +1981,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2002,7 +2002,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Porro quisquam</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Porro quisquam</a></h2>
                                                     <span class="price">
                                                         $ 88.00
                                                     </span>
@@ -2015,7 +2015,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2038,7 +2038,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -2051,7 +2051,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2072,7 +2072,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -2085,7 +2085,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2106,7 +2106,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -2119,7 +2119,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2140,7 +2140,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -2153,7 +2153,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2176,7 +2176,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -2189,7 +2189,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2210,7 +2210,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -2223,7 +2223,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2244,7 +2244,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -2257,7 +2257,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2278,7 +2278,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -2291,7 +2291,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2323,7 +2323,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Duis pulvinar</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Duis pulvinar</a></h2>
                                                     <span class="price">
                                                         $ 84.00
                                                     </span>
@@ -2336,7 +2336,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2357,7 +2357,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Porro quisquam</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Porro quisquam</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 68.00
                                                     </span>
@@ -2370,7 +2370,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2391,7 +2391,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Laudantium</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Laudantium</a></h2>
                                                     <span class="price">
                                                         $ 75.00
                                                     </span>
@@ -2404,7 +2404,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2425,7 +2425,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Nullam maximus</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Nullam maximus</a></h2>
                                                     <span class="price">
                                                         $ 95.00
                                                     </span>
@@ -2438,7 +2438,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2461,7 +2461,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Nemo enim</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Nemo enim</a></h2>
                                                     <span class="price">
                                                         $ 55.00
                                                     </span>
@@ -2474,7 +2474,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2495,7 +2495,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Natus erro</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Natus erro</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -2508,7 +2508,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2529,7 +2529,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Epicuri per</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Epicuri per</a></h2>
                                                     <span class="price">
                                                         $ 88.00
                                                     </span>
@@ -2542,7 +2542,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2563,7 +2563,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -2576,7 +2576,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2599,7 +2599,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Auctor gravida enim</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Auctor gravida enim</a></h2>
                                                     <span class="price">
                                                          $ 63.00
                                                     </span>
@@ -2612,7 +2612,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2633,7 +2633,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Nulla sed libero</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Nulla sed libero</a></h2>
                                                     <span class="price">
                                                         $ 86.00
                                                     </span>
@@ -2646,7 +2646,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2667,7 +2667,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Pellentesque posuere</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Pellentesque posuere</a></h2>
                                                     <span class="price">
                                                         $ 78.00
                                                     </span>
@@ -2680,7 +2680,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2701,7 +2701,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -2714,7 +2714,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2746,7 +2746,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Donec tempus</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Donec tempus</a></h2>
                                                     <span class="price">
                                                         $ 82.00
                                                     </span>
@@ -2759,7 +2759,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2780,7 +2780,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sed tempor</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sed tempor</a></h2>
                                                     <span class="price">
                                                         <del>$ 87.00</del> $ 80.00
                                                     </span>
@@ -2793,7 +2793,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2814,7 +2814,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Cras neque</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Cras neque</a></h2>
                                                     <span class="price">
                                                         $ 70.00
                                                     </span>
@@ -2827,7 +2827,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2848,7 +2848,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Pellentesque ultricies</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Pellentesque ultricies</a></h2>
                                                     <span class="price">
                                                         $ 85.00
                                                     </span>
@@ -2861,7 +2861,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2884,7 +2884,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Vestibulum suscipit</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Vestibulum suscipit</a></h2>
                                                     <span class="price">
                                                         $ 84.00
                                                     </span>
@@ -2897,7 +2897,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2918,7 +2918,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Nemo enim</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Nemo enim</a></h2>
                                                     <span class="price">
                                                         $ 220.00
                                                     </span>
@@ -2931,7 +2931,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2952,7 +2952,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Epicuri per</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Epicuri per</a></h2>
                                                     <span class="price">
                                                         $ 152.00
                                                     </span>
@@ -2965,7 +2965,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2986,7 +2986,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -2999,7 +2999,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -3022,7 +3022,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Laudantium</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Laudantium</a></h2>
                                                     <span class="price">
                                                         $ 86.00
                                                     </span>
@@ -3035,7 +3035,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -3056,7 +3056,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Porro quisquam</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Porro quisquam</a></h2>
                                                     <span class="price">
                                                         $ 68.00
                                                     </span>
@@ -3069,7 +3069,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -3090,7 +3090,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -3103,7 +3103,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -3124,7 +3124,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -3137,7 +3137,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -3169,7 +3169,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Vulputate justo</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Vulputate justo</a></h2>
                                                     <span class="price">
                                                         $ 95.00
                                                     </span>
@@ -3182,7 +3182,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -3203,7 +3203,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Aliquam lobortis est</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Aliquam lobortis est</a></h2>
                                                     <span class="price">
                                                         $ 97.00
                                                     </span>
@@ -3216,7 +3216,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -3237,7 +3237,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Dignissim</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Dignissim</a></h2>
                                                     <span class="price">
                                                         $ 82.00
                                                     </span>
@@ -3250,7 +3250,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -3271,7 +3271,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -3284,7 +3284,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -3307,7 +3307,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Aliquam lobortis</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Aliquam lobortis</a></h2>
                                                     <span class="price">
                                                         $ 166.00
                                                     </span>
@@ -3320,7 +3320,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -3341,7 +3341,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Condimentum posuere</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Condimentum posuere</a></h2>
                                                     <span class="price">
                                                         $ 115.00
                                                     </span>
@@ -3354,7 +3354,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -3375,7 +3375,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -3388,7 +3388,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -3409,7 +3409,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Phasellus vel hendrerit</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Phasellus vel hendrerit</a></h2>
                                                     <span class="price">
                                                         $ 42.00
                                                     </span>
@@ -3422,7 +3422,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -3445,7 +3445,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Auctor gravida enim</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Auctor gravida enim</a></h2>
                                                     <span class="price">
                                                         $ 75.00
                                                     </span>
@@ -3458,7 +3458,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -3479,7 +3479,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Phasellus vel hendrerit</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Phasellus vel hendrerit</a></h2>
                                                     <span class="price">
                                                         $ 55.00
                                                     </span>
@@ -3492,7 +3492,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -3513,7 +3513,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -3526,7 +3526,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -3547,7 +3547,7 @@
                                             </div>
                                             <div class="list-col8">
                                                 <div class="product-info">
-                                                    <h2><a href="single_product">Sit voluptatem</a></h2>
+                                                    <h2><a href="{% url 'shop' %}">Sit voluptatem</a></h2>
                                                     <span class="price">
                                                         <del>$ 77.00</del> $ 66.00
                                                     </span>
@@ -3560,7 +3560,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add-to-cart">
-                                                    <a href="cart">Add to cart</a>
+                                                    <a href="{% url 'cart' %}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -4121,7 +4121,7 @@
                                                             <a class="add-cart" href="cart">add to cart</a>
                                                         </div>
                                                         <div class="wishlist-compear-area">
-                                                            <a href="wishlist"><i class="ion-ios-heart-outline"></i> Add to Wishlist</a>
+                                                            <a href="{% url 'wishlist' %}"><i class="ion-ios-heart-outline"></i> Add to Wishlist</a>
                                                             <a href=""><i class="ion-ios-loop-strong"></i> Compare</a>
                                                         </div>
                                                         <div class="product_meta">

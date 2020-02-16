@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-#write unit and functional test to all of these views
+# write unit and functional test to all of these views
 
 handler404 = 'store.apps.pages.views.page_not_found_handler'
 
