@@ -28,7 +28,11 @@ urlpatterns = [
     path('checkout/', views.checkout_view, name='checkout'),
     path('contact/', views.contact_view, name='contact'),
     path('faq/', views.faq_view, name='faq'),
-    path('restore_password/', views.restore_password_view, name='restore_pswd'),
+    path(
+        'restore_password/',
+        views.restore_password_view,
+        name='restore_pswd'
+    ),
     path('login/', views.login_view, name='login'),
     path('account/', views.my_account_view, name='account'),
     path('register/', views.register_view, name='register'),
