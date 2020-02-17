@@ -40,7 +40,7 @@ def my_account_view(request):
 	return render(request, 'my-account.html')
 
 def register_view(request):
-	return render(request, 'reqister.html')
+	return render(request, 'register.html')
 
 def service_view(request):
 	return render(request, 'service.html')

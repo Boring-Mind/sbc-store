@@ -123,9 +123,9 @@
                                 <!-- shop-cart-menu -->
                                 <div class="shop-cart-menu pull-right">
                                     <ul>
-                                        <li><a href="{% url 'login' %}"><i class="ion-ios-shuffle-strong"></i></a></li>
+                                        <li><a href=""><i class="ion-ios-shuffle-strong"></i></a></li>
                                         <li><a href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a></li>
-                                        <li><a href="{% url 'login' %}">
+                                        <li><a href="{% url 'cart' %}">
                                             <span class="cart-icon">
                                                 <i class="ion-bag"></i><sup>3</sup>
                                             </span>
@@ -378,7 +378,7 @@
                                         <ul>
                                             <li class="current"><a href="">Home <i class="fa fa-angle-down"></i></a>
                                                 <ul class="submenu">
-                                                    <li><a href="">Home Shop 1</a></li>
+                                                    <li><a href="{% url 'index' %}">Home Shop 1</a></li>
                                                     <li><a href="index-2">Home Shop 2</a></li>
                                                     <li><a href="index-3">Home Shop 3</a></li>
                                                     <li><a href="index-4">Home Shop 4</a></li>
@@ -492,7 +492,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <nav class="woocommerce-breadcrumb">
-                                <a href="">Home</a>
+                                <a href="{% url 'index' %}">Home</a>
                                 <span class="separator">/</span> sign in
                             </nav>
                         </div>
@@ -523,7 +523,7 @@
                                         <h3 class="custom-title">new customer</h3>
                                         <p class="mtb-10"><strong>Register</strong></p>
                                         <p>By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made</p>
-                                        <a class="customer-btn" href="register">continue</a>
+                                        <a class="customer-btn" href="{% url 'register' %}">continue</a>
                                     </div>
                                 </div>
                             </div>
@@ -578,11 +578,11 @@
                             <div class="col-sm-12 col-xl-3">
                                 <div class="footer-social">
                                     <ul class="social-icons">
-                                        <li><a class="facebook social-icon" href="login" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a class="twitter social-icon" href="login" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a class="instagram social-icon" href="login" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a class="linkedin social-icon" href="login" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a class="rss social-icon" href="login" title="Rss" target="_blank"><i class="fa fa-rss"></i></a></li>
+                                        <li><a class="facebook social-icon" href="" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a class="twitter social-icon" href="" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a class="instagram social-icon" href="" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a class="linkedin social-icon" href="" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a class="rss social-icon" href="" title="Rss" target="_blank"><i class="fa fa-rss"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -957,7 +957,7 @@
                                                             <form action="login.html#">
                                                                 <input class="quantity mr-40" min="1" value="1" type="number">
                                                             </form>
-                                                            <a class="add-cart" href="cart">add to cart</a>
+                                                            <a class="add-cart" href="{% url 'cart' %}">add to cart</a>
                                                         </div>
                                                         <div class="wishlist-compear-area">
                                                             <a href="{% url 'wishlist' %}"><i class="ion-ios-heart-outline"></i> Add to Wishlist</a>
@@ -970,11 +970,11 @@
                                                             <div class="widget widget_socialsharing_widget">
                                                                 <h3 class="widget-title">Share this product</h3>
                                                                 <ul class="social-icons">
-                                                                    <li><a class="facebook social-icon" href="login"><i class="fa fa-facebook"></i></a></li>
-                                                                    <li><a class="twitter social-icon" href="login"><i class="fa fa-twitter"></i></a></li>
-                                                                    <li><a class="pinterest social-icon" href="login"><i class="fa fa-pinterest"></i></a></li>
-                                                                    <li><a class="gplus social-icon" href="login"><i class="fa fa-google-plus"></i></a></li>
-                                                                    <li><a class="linkedin social-icon" href="login"><i class="fa fa-linkedin"></i></a></li>
+                                                                    <li><a class="facebook social-icon" href=""><i class="fa fa-facebook"></i></a></li>
+                                                                    <li><a class="twitter social-icon" href=""><i class="fa fa-twitter"></i></a></li>
+                                                                    <li><a class="pinterest social-icon" href=""><i class="fa fa-pinterest"></i></a></li>
+                                                                    <li><a class="gplus social-icon" href=""><i class="fa fa-google-plus"></i></a></li>
+                                                                    <li><a class="linkedin social-icon" href=""><i class="fa fa-linkedin"></i></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
