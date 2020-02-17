@@ -660,6 +660,7 @@
 			<!-- About page area end-->
             <footer class="footer-area">
                 <!-- newsletter area -->
+                {% block newsletter-area %}
                 <div class="newsletter-area">
                     <div class="container">
                         <div class="row">
@@ -692,8 +693,10 @@
                         </div>
                     </div>
                 </div>
+                {% endblock newsletter-area %}
                 <!-- newsletter area end -->
                 <!-- footer policy area -->
+                {% block footer-policy-area %}
                 <div class="footer-policy-area">
                     <div class="container">
                         <div class="row">
@@ -728,8 +731,10 @@
                         </div>
                     </div>
                 </div>
+                {% endblock footer-policy-area %}
                 <!-- footer policy area end -->
                 <!-- footer main -->
+                {% block footer-main %}
                 <div class="footer-main">
                     <div class="container">
                         <div class="row">
@@ -797,8 +802,10 @@
                         </div>
                     </div>
                 </div>
+                {% endblock footer-main %}
                 <!-- footer main end -->
                 <!-- Footer bottome -->
+                {% block footer-bottom %}
                 <div class="footer-bottome">
                     <div class="container">
                         <div class="row">
@@ -934,6 +941,7 @@
                         </div>
                     </div>
                 </div>
+                {% endblock footer-bottom %}
                 <!-- Footer bottome end -->
                 <!-- footer copyright area -->
                 <div class="footer-copyright-area">
@@ -965,7 +973,7 @@
 
 
 
-
+            {% block quickview-product %}
             <!-- QUICKVIEW PRODUCT START -->
             <div id="quickview-wrapper">
                 <!-- Modal -->
@@ -1109,6 +1117,7 @@
                     </div><!-- .modal-dialog -->
                 </div><!-- END Modal -->
             </div>
+            {% endblock quickview-product %}
             <!-- QUICKVIEW PRODUCT END -->
         </div>
         <!-- Body main wrapper end -->

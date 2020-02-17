@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Bege || checkout</title>
+        <title>Bege || Checkout</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load static %}
@@ -49,24 +49,24 @@
                                     <div class="wpb_wrapper">
                                         <!-- my account -->
                                         <div class="menu-my-account-container">
-                                            <a href="checkout">My Account <i class="ion-ios-arrow-down"></i></a>
+                                            <a href="{% url 'account' %}">My Account <i class="ion-ios-arrow-down"></i></a>
                                             <ul>
-                                                <li><a href="my-account">My Account</a></li>
-                                                <li><a href="login">Login</a></li>
-                                                <li><a href="register">Register</a></li>
-                                                <li><a href="checkout">Checkout</a></li>
+                                                <li><a href="{% url 'account' %}">My Account</a></li>
+                                                <li><a href="{% url 'login' %}">Login</a></li>
+                                                <li><a href="{% url 'register' %}">Register</a></li>
+                                                <li><a href="{% url 'checkout' %}">Checkout</a></li>
                                             </ul>
                                         </div>
                                         <div class="switcher">
                                             <!-- language-menu -->
                                             <div class="language">
-                                                <a href="checkout">
+                                                <a href="{% url 'checkout' %}">
                                                     <img src="{% static "img/icons/en.png" %}" alt="language-selector">English
                                                     <i class="ion-ios-arrow-down"></i>
                                                 </a>
                                                 <ul>
                                                     <li>
-                                                        <a href="checkout">
+                                                        <a href="{% url 'checkout' %}">
                                                             <img src="{% static "img/icons/fr.png" %}" alt="French">
                                                             <span>French</span>
                                                         </a>
@@ -75,9 +75,9 @@
                                             </div>
                                             <!-- currency-menu -->
                                             <div class="currency">
-                                                <a href="checkout">$ USD<i class="ion-ios-arrow-down"></i></a>
+                                                <a href="{% url 'checkout' %}">$ USD<i class="ion-ios-arrow-down"></i></a>
                                                 <ul>
-                                                    <li><a href="checkout">€ EUR</a></li>
+                                                    <li><a href="{% url 'checkout' %}">€ EUR</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -123,9 +123,9 @@
                                 <!-- shop-cart-menu -->
                                 <div class="shop-cart-menu pull-right">
                                     <ul>
-                                        <li><a href="checkout"><i class="ion-ios-shuffle-strong"></i></a></li>
-                                        <li><a href="wishlist"><i class="ion-android-favorite-outline"></i></a></li>
-                                        <li><a href="checkout">
+                                        <li><a href="{% url 'checkout' %}"><i class="ion-ios-shuffle-strong"></i></a></li>
+                                        <li><a href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a></li>
+                                        <li><a href="{% url 'cart' %}">
                                             <span class="cart-icon">
                                                 <i class="ion-bag"></i><sup>3</sup>
                                             </span>
@@ -138,13 +138,13 @@
                                                     <!-- single-shop-cart-wrapper -->
                                                     <div class="single-shop-cart-wrapper">
                                                         <div class="shop-cart-img">
-                                                            <a href="checkout"><img src="{% static "img/product/1.jpg" %}" alt="Image of Product"></a>
+                                                            <a href="{% url 'checkout' %}"><img src="{% static "img/product/1.jpg" %}" alt="Image of Product"></a>
                                                         </div>
                                                         <div class="shop-cart-info">
-                                                            <h5><a href="cart">sport t-shirt men</a></h5>
+                                                            <h5><a href="{% url 'cart' %}">sport t-shirt men</a></h5>
                                                             <span class="price">£515.00</span>
                                                             <span class="quantaty">Qty: 1</span>
-                                                            <span class="cart-remove"><a href="checkout"><i class="fa fa-times"></i></a></span>
+                                                            <span class="cart-remove"><a href="{% url 'checkout' %}"><i class="fa fa-times"></i></a></span>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -152,13 +152,13 @@
                                                     <!-- single-shop-cart-wrapper -->
                                                     <div class="single-shop-cart-wrapper">
                                                         <div class="shop-cart-img">
-                                                            <a href="checkout"><img src="{% static "img/product/2.jpg" %}" alt="Image of Product"></a>
+                                                            <a href="{% url 'checkout' %}"><img src="{% static "img/product/2.jpg" %}" alt="Image of Product"></a>
                                                         </div>
                                                         <div class="shop-cart-info">
-                                                            <h5><a href="cart">sport coat amet</a></h5>
+                                                            <h5><a href="{% url 'cart' %}">sport coat amet</a></h5>
                                                             <span class="price">£100.00</span>
                                                             <span class="quantaty">Qty: 1</span>
-                                                            <span class="cart-remove"><a href="checkout"><i class="fa fa-times"></i></a></span>
+                                                            <span class="cart-remove"><a href="{% url 'checkout' %}"><i class="fa fa-times"></i></a></span>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -166,13 +166,13 @@
                                                     <!-- single-shop-cart-wrapper -->
                                                     <div class="single-shop-cart-wrapper">
                                                         <div class="shop-cart-img">
-                                                            <a href="checkout"><img src="{% static "img/product/3.jpg" %}" alt="Image of Product"></a>
+                                                            <a href="{% url 'checkout' %}"><img src="{% static "img/product/3.jpg" %}" alt="Image of Product"></a>
                                                         </div>
                                                         <div class="shop-cart-info">
-                                                            <h5><a href="cart">Pellentesque men</a></h5>
+                                                            <h5><a href="{% url 'cart' %}">Pellentesque men</a></h5>
                                                             <span class="price">£265.00</span>
                                                             <span class="quantaty">Qty: 1</span>
-                                                            <span class="cart-remove"><a href="checkout"><i class="fa fa-times"></i></a></span>
+                                                            <span class="cart-remove"><a href="{% url 'checkout' %}"><i class="fa fa-times"></i></a></span>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -184,8 +184,8 @@
                                                 </li>
                                                 <li>
                                                     <div class="shop-cart-btn">
-                                                        <a href="checkout">Checkout</a>
-                                                        <a href="cart" class="pull-right">View Cart</a>
+                                                        <a href="{% url 'checkout' %}">Checkout</a>
+                                                        <a href="{% url 'cart' %}" class="pull-right">View Cart</a>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -206,17 +206,17 @@
                                 <span class="categorie-title">Categories</span>
                                 <nav>
                                     <ul class="categori-menu-list menu-hidden">
-                                        <li><a href="shop"><span><img src="{% static "img/icons/1.png" %}" alt="menu-icon"></span>Electronics<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/1.png" %}" alt="menu-icon"></span>Electronics<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                             <!-- categori Mega-Menu Start -->
                                             <ul class="ht-dropdown megamenu first-megamenu">
                                                 <!-- Single Column Start -->
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Cameras</li>
-                                                        <li><a href="shop">Cords and Cables</a></li>
-                                                        <li><a href="shop">gps accessories</a></li>
-                                                        <li><a href="shop">Microphones</a></li>
-                                                        <li><a href="shop">Wireless Transmitters</a></li>
+                                                        <li><a href="{% url 'shop' %}">Cords and Cables</a></li>
+                                                        <li><a href="{% url 'shop' %}">gps accessories</a></li>
+                                                        <li><a href="{% url 'shop' %}">Microphones</a></li>
+                                                        <li><a href="{% url 'shop' %}">Wireless Transmitters</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
@@ -224,10 +224,10 @@
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Digital Cameras</li>
-                                                        <li><a href="shop">Camera one</a></li>
-                                                        <li><a href="shop">Camera two</a></li>
-                                                        <li><a href="shop">Camera three</a></li>
-                                                        <li><a href="shop">Camera four</a></li>
+                                                        <li><a href="{% url 'shop' %}">Camera one</a></li>
+                                                        <li><a href="{% url 'shop' %}">Camera two</a></li>
+                                                        <li><a href="{% url 'shop' %}">Camera three</a></li>
+                                                        <li><a href="{% url 'shop' %}">Camera four</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
@@ -235,27 +235,27 @@
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Digital Cameras</li>
-                                                        <li><a href="shop">Camera one</a></li>
-                                                        <li><a href="shop">Camera two</a></li>
-                                                        <li><a href="shop">Camera three</a></li>
-                                                        <li><a href="shop">Camera four</a></li>
+                                                        <li><a href="{% url 'shop' %}">Camera one</a></li>
+                                                        <li><a href="{% url 'shop' %}">Camera two</a></li>
+                                                        <li><a href="{% url 'shop' %}">Camera three</a></li>
+                                                        <li><a href="{% url 'shop' %}">Camera four</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
                                             </ul>
                                             <!-- categori Mega-Menu End -->
                                         </li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/2.png" %}" alt="menu-icon"></span>Fashion<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/2.png" %}" alt="menu-icon"></span>Fashion<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                             <!-- categori Mega-Menu Start -->
                                             <ul class="ht-dropdown megamenu megamenu-two">
                                                 <!-- Single Column Start -->
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Men’s Fashion</li>
-                                                        <li><a href="shop">Blazers</a></li>
-                                                        <li><a href="shop">Boots</a></li>
-                                                        <li><a href="shop">pants</a></li>
-                                                        <li><a href="shop">Tops & Tees</a></li>
+                                                        <li><a href="{% url 'shop' %}">Blazers</a></li>
+                                                        <li><a href="{% url 'shop' %}">Boots</a></li>
+                                                        <li><a href="{% url 'shop' %}">pants</a></li>
+                                                        <li><a href="{% url 'shop' %}">Tops & Tees</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
@@ -263,27 +263,27 @@
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Women’s Fashion</li>
-                                                        <li><a href="shop">Bags</a></li>
-                                                        <li><a href="shop">Bottoms</a></li>
-                                                        <li><a href="shop">Shirts</a></li>
-                                                        <li><a href="shop">Tailored</a></li>
+                                                        <li><a href="{% url 'shop' %}">Bags</a></li>
+                                                        <li><a href="{% url 'shop' %}">Bottoms</a></li>
+                                                        <li><a href="{% url 'shop' %}">Shirts</a></li>
+                                                        <li><a href="{% url 'shop' %}">Tailored</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
                                             </ul>
                                             <!-- categori Mega-Menu End -->
                                         </li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/3.png" %}" alt="menu-icon"></span>Home & Kitchen<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/3.png" %}" alt="menu-icon"></span>Home & Kitchen<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                             <!-- categori Mega-Menu Start -->
                                             <ul class="ht-dropdown megamenu megamenu-two">
                                                 <!-- Single Column Start -->
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Large Appliances</li>
-                                                        <li><a href="shop">Armchairs</a></li>
-                                                        <li><a href="shop">Bunk Bed</a></li>
-                                                        <li><a href="shop">Mattress</a></li>
-                                                        <li><a href="shop">Sideboard</a></li>
+                                                        <li><a href="{% url 'shop' %}">Armchairs</a></li>
+                                                        <li><a href="{% url 'shop' %}">Bunk Bed</a></li>
+                                                        <li><a href="{% url 'shop' %}">Mattress</a></li>
+                                                        <li><a href="{% url 'shop' %}">Sideboard</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
@@ -291,17 +291,17 @@
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Small Appliances</li>
-                                                        <li><a href="shop">Bootees Bags</a></li>
-                                                        <li><a href="shop">Jackets</a></li>
-                                                        <li><a href="shop">Shelf</a></li>
-                                                        <li><a href="shop">Shoes</a></li>
+                                                        <li><a href="{% url 'shop' %}">Bootees Bags</a></li>
+                                                        <li><a href="{% url 'shop' %}">Jackets</a></li>
+                                                        <li><a href="{% url 'shop' %}">Shelf</a></li>
+                                                        <li><a href="{% url 'shop' %}">Shoes</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
                                             </ul>
                                             <!-- categori Mega-Menu End -->
                                         </li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/4.png" %}" alt="menu-icon"></span>Phones & Tablets<i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/4.png" %}" alt="menu-icon"></span>Phones & Tablets<i class="fa fa-angle-right" aria-hidden="true"></i>
                                                                     </a>
                                             <!-- categori Mega-Menu Start -->
                                             <ul class="ht-dropdown megamenu megamenu-two">
@@ -309,10 +309,10 @@
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Tablet</li>
-                                                        <li><a href="shop">tablet one</a></li>
-                                                        <li><a href="shop">tablet two</a></li>
-                                                        <li><a href="shop">tablet three</a></li>
-                                                        <li><a href="shop">tablet four</a></li>
+                                                        <li><a href="{% url 'shop' %}">tablet one</a></li>
+                                                        <li><a href="{% url 'shop' %}">tablet two</a></li>
+                                                        <li><a href="{% url 'shop' %}">tablet three</a></li>
+                                                        <li><a href="{% url 'shop' %}">tablet four</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
@@ -320,27 +320,27 @@
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Smartphone</li>
-                                                        <li><a href="shop">phone one</a></li>
-                                                        <li><a href="shop">phone two</a></li>
-                                                        <li><a href="shop">phone three</a></li>
-                                                        <li><a href="shop">phone four</a></li>
+                                                        <li><a href="{% url 'shop' %}">phone one</a></li>
+                                                        <li><a href="{% url 'shop' %}">phone two</a></li>
+                                                        <li><a href="{% url 'shop' %}">phone three</a></li>
+                                                        <li><a href="{% url 'shop' %}">phone four</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
                                             </ul>
                                             <!-- categori Mega-Menu End -->
                                         </li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/5.png" %}" alt="menu-icon"></span>TV & Video<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/5.png" %}" alt="menu-icon"></span>TV & Video<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                             <!-- categori Mega-Menu Start -->
                                             <ul class="ht-dropdown megamenu megamenu-two">
                                                 <!-- Single Column Start -->
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Gaming Desktops</li>
-                                                        <li><a href="shop">Alpha Desktop</a></li>
-                                                        <li><a href="shop">rober Desktop</a></li>
-                                                        <li><a href="shop">Ultra Desktop </a></li>
-                                                        <li><a href="shop">beta desktop</a></li>
+                                                        <li><a href="{% url 'shop' %}">Alpha Desktop</a></li>
+                                                        <li><a href="{% url 'shop' %}">rober Desktop</a></li>
+                                                        <li><a href="{% url 'shop' %}">Ultra Desktop </a></li>
+                                                        <li><a href="{% url 'shop' %}">beta desktop</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
@@ -348,25 +348,25 @@
                                                 <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Women’s Fashion</li>
-                                                        <li><a href="shop">3D-Capable</a></li>
-                                                        <li><a href="shop">Clearance</a></li>
-                                                        <li><a href="shop">Free Shipping Eligible</a></li>
-                                                        <li><a href="shop">On Sale</a></li>
+                                                        <li><a href="{% url 'shop' %}">3D-Capable</a></li>
+                                                        <li><a href="{% url 'shop' %}">Clearance</a></li>
+                                                        <li><a href="{% url 'shop' %}">Free Shipping Eligible</a></li>
+                                                        <li><a href="{% url 'shop' %}">On Sale</a></li>
                                                     </ul>
                                                 </li>
                                                 <!-- Single Column End -->
                                             </ul>
                                             <!-- categori Mega-Menu End -->
                                         </li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/6.png" %}" alt="menu-icon"></span>Beauty</a>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/6.png" %}" alt="menu-icon"></span>Beauty</a>
                                         </li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/7.png" %}" alt="menu-icon"></span>Sport & tourism</a>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/7.png" %}" alt="menu-icon"></span>Sport & tourism</a>
                                         </li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/8.png" %}" alt="menu-icon"></span>Fruits & Veggies</a></li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/9.png" %}" alt="menu-icon"></span>Computer & Laptop</a></li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/10.png" %}" alt="menu-icon"></span>Meat & Seafood</a></li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/12.png" %}" alt="menu-icon"></span>Samsung</a></li>
-                                        <li><a href="shop"><span><img src="{% static "img/icons/11.png" %}" alt="menu-icon"></span>Sanyo</a></li>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/8.png" %}" alt="menu-icon"></span>Fruits & Veggies</a></li>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/9.png" %}" alt="menu-icon"></span>Computer & Laptop</a></li>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/10.png" %}" alt="menu-icon"></span>Meat & Seafood</a></li>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/12.png" %}" alt="menu-icon"></span>Samsung</a></li>
+                                        <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/11.png" %}" alt="menu-icon"></span>Sanyo</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -384,23 +384,23 @@
                                                     <li><a href="index-4">Home Shop 4</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="shop">Shop</a></li>
-                                            <li><a href="blog">Blog</a></li>
-                                            <li><a href="about-us">About Us</a></li>
-                                            <li><a href="contact-us">Contact</a></li>
-                                            <li><a href="checkout">Features <i class="fa fa-angle-down"></i></a>
+                                            <li><a href="{% url 'shop' %}">Shop</a></li>
+                                            <li><a href="{% url 'blog' %}">Blog</a></li>
+                                            <li><a href="{% url 'about' %}">About Us</a></li>
+                                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                                            <li><a href="{% url 'checkout' %}">Features <i class="fa fa-angle-down"></i></a>
                                                 <ul class="megamenu-3-column">
-                                                    <li><a href="checkout">Pages</a>
+                                                    <li><a href="{% url 'checkout' %}">Pages</a>
                                                         <ul>
-                                                            <li><a href="about-us">About Us</a></li>
-                                                            <li><a href="contact-us">Contact Us</a></li>
-                                                            <li><a href="service">Services</a></li>
+                                                            <li><a href="{% url 'about' %}">About Us</a></li>
+                                                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                                            <li><a href="{% url 'service' %}">Services</a></li>
                                                             <li><a href="portfolio">Portfolio</a></li>
                                                             <li><a href="faq">Frequently Questins</a></li>
                                                             <li><a href="404">Error 404</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li><a href="checkout">Blog</a>
+                                                    <li><a href="{% url 'checkout' %}">Blog</a>
                                                         <ul>
                                                             <li><a href="blog-no-sidebar">None Sidebar</a></li>
                                                             <li><a href="blog">Sidebar right</a></li>
@@ -410,14 +410,14 @@
                                                             <li><a href="single-blog-video">Video Format</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li><a href="checkout">Shop</a>
+                                                    <li><a href="{% url 'checkout' %}">Shop</a>
                                                         <ul>
-                                                            <li><a href="shop">Shop</a></li>
+                                                            <li><a href="{% url 'shop' %}">Shop</a></li>
                                                             <li><a href="shop-list">Shop List View</a></li>
                                                             <li><a href="shop-right">Shop Right</a></li>
                                                             <li><a href="single-product">Shop Single</a></li>
-                                                            <li><a href="cart">Shoping Cart</a></li>
-                                                            <li><a href="checkout">Checkout</a></li>
+                                                            <li><a href="{% url 'cart' %}">Shoping Cart</a></li>
+                                                            <li><a href="{% url 'checkout' %}">Checkout</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -429,7 +429,7 @@
                                     <div class="mobile-menu">
                                         <nav id="mobile-menu-active">
                                             <ul class="menu-overflow">
-                                                <li><a href="checkout">HOME</a>
+                                                <li><a href="{% url 'checkout' %}">HOME</a>
                                                     <ul>
                                                         <li><a href="">Home Shop 1</a></li>
                                                         <li><a href="index-2">Home Shop 2</a></li>
@@ -437,23 +437,23 @@
                                                         <li><a href="index-4">Home Shop 4</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="shop">Shop</a></li>
-                                                <li><a href="blog">Blog</a></li>
-                                                <li><a href="about-us">About Us</a></li>
-                                                <li><a href="contact-us">Contact</a></li>
-                                                <li><a href="checkout">Features</a>
+                                                <li><a href="{% url 'shop' %}">Shop</a></li>
+                                                <li><a href="{% url 'blog' %}">Blog</a></li>
+                                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                                                <li><a href="{% url 'checkout' %}">Features</a>
                                                     <ul>
-                                                        <li><a href="checkout">Pages</a>
+                                                        <li><a href="{% url 'checkout' %}">Pages</a>
                                                             <ul>
-                                                                <li><a href="about-us">About Us</a></li>
-                                                                <li><a href="service">Services</a></li>
+                                                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                                                <li><a href="{% url 'service' %}">Services</a></li>
                                                                 <li><a href="http://preview.hasthemes.com/bege-v4/bege/service-2.html">Services Two</a></li>
                                                                 <li><a href="portfolio">Portfolio</a></li>
                                                                 <li><a href="faq">Frequently Questins</a></li>
                                                                 <li><a href="404">Error 404</a></li>
                                                             </ul>
                                                         </li>
-                                                        <li><a href="checkout">Blog</a>
+                                                        <li><a href="{% url 'checkout' %}">Blog</a>
                                                             <ul>
                                                                 <li><a href="blog-no-sidebar">None Sidebar</a></li>
                                                                 <li><a href="blog">Sidebar right</a></li>
@@ -463,14 +463,14 @@
                                                                 <li><a href="single-blog-video">Video Format</a></li>
                                                             </ul>
                                                         </li>
-                                                        <li><a href="checkout">Shop</a>
+                                                        <li><a href="{% url 'checkout' %}">Shop</a>
                                                             <ul>
-                                                                <li><a href="shop">Shop</a></li>
-                                                                <li><a href="shop-list">Shop List View</a></li>
+                                                                <li><a href="{% url 'shop' %}">Shop</a></li>
+                                                                <li><a href="shop-list}">Shop List View</a></li>
                                                                 <li><a href="shop-right">Shop Right</a></li>
                                                                 <li><a href="single-product">Shop Single</a></li>
-                                                                <li><a href="cart">Shoping Cart</a></li>
-                                                                <li><a href="checkout">Checkout</a></li>
+                                                                <li><a href="{% url 'cart' %}">Shoping Cart</a></li>
+                                                                <li><a href="{% url 'checkout' %}">Checkout</a></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
@@ -492,7 +492,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <nav class="woocommerce-breadcrumb">
-                                <a href="">Home</a>
+                                <a href="{% url 'index' %}">Home</a>
                                 <span class="separator">/</span> Checkout
                             </nav>
                         </div>
@@ -541,7 +541,7 @@
                                                 </label>
                                                 </p>
                                                 <p class="lost-password">
-                                                    <a href="checkout">Lost your password?</a>
+                                                    <a href="{% url 'checkout' %}">Lost your password?</a>
                                                 </p>
                                             </form>
                                         </div>
@@ -932,7 +932,7 @@
                         <div class="row">
                             <div class="col-sm-6 col-lg-3 col-md-3 col-xs-12">
                                 <div class="footer-logo-area">
-                                    <a href="checkout"><img src="{% static "img/logo/logo-black.png" %}" alt="footer logo"></a>
+                                    <a href="{% url 'checkout' %}"><img src="{% static "img/logo/logo-black.png" %}" alt="footer logo"></a>
                                     <p>We are a team of designers and developers that create high quality Wordpress, Magento, Prestashop, Opencart.</p>
                                     <ul>
                                         <li>
@@ -954,13 +954,13 @@
                                 <div class="footer-menu">
                                     <h3>Customer Service</h3>
                                     <ul>
-                                        <li><a href="checkout">Contact Us</a></li>
-                                        <li><a href="checkout">Returns</a></li>
-                                        <li><a href="checkout">Order History</a></li>
-                                        <li><a href="checkout">Site Map</a></li>
-                                        <li><a href="checkout">Testimonials</a></li>
-                                        <li><a href="checkout">My Account</a></li>
-                                        <li><a href="checkout">Unsubscribe Notification</a></li>
+                                        <li><a href="{% url 'checkout' %}">Contact Us</a></li>
+                                        <li><a href="{% url 'checkout' %}">Returns</a></li>
+                                        <li><a href="{% url 'checkout' %}">Order History</a></li>
+                                        <li><a href="{% url 'checkout' %}">Site Map</a></li>
+                                        <li><a href="{% url 'checkout' %}">Testimonials</a></li>
+                                        <li><a href="{% url 'checkout' %}">My Account</a></li>
+                                        <li><a href="{% url 'checkout' %}">Unsubscribe Notification</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -968,13 +968,13 @@
                                 <div class="footer-menu">
                                     <h3>Information</h3>
                                     <ul>
-                                        <li><a href="checkout">About Us</a></li>
-                                        <li><a href="checkout">Delivery infomation</a></li>
-                                        <li><a href="checkout">Privacy Policy</a></li>
-                                        <li><a href="checkout">Terms & Conditions</a></li>
-                                        <li><a href="checkout">Warranty</a></li>
-                                        <li><a href="checkout">FAQ</a></li>
-                                        <li><a href="checkout">Seller Login</a></li>
+                                        <li><a href="{% url 'checkout' %}">About Us</a></li>
+                                        <li><a href="{% url 'checkout' %}">Delivery infomation</a></li>
+                                        <li><a href="{% url 'checkout' %}">Privacy Policy</a></li>
+                                        <li><a href="{% url 'checkout' %}">Terms & Conditions</a></li>
+                                        <li><a href="{% url 'checkout' %}">Warranty</a></li>
+                                        <li><a href="{% url 'checkout' %}">FAQ</a></li>
+                                        <li><a href="{% url 'checkout' %}">Seller Login</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -982,12 +982,12 @@
                                 <div class="footer-menu">
                                     <h3>Extras</h3>
                                     <ul>
-                                        <li><a href="checkout">Brands</a></li>
-                                        <li><a href="checkout">Gift Vouchers</a></li>
-                                        <li><a href="checkout">Affiliates</a></li>
-                                        <li><a href="checkout">Wishlist</a></li>
-                                        <li><a href="checkout">Order History</a></li>
-                                        <li><a href="checkout">Track Your Order</a></li>
+                                        <li><a href="{% url 'checkout' %}">Brands</a></li>
+                                        <li><a href="{% url 'checkout' %}">Gift Vouchers</a></li>
+                                        <li><a href="{% url 'checkout' %}">Affiliates</a></li>
+                                        <li><a href="{% url 'checkout' %}">Wishlist</a></li>
+                                        <li><a href="{% url 'checkout' %}">Order History</a></li>
+                                        <li><a href="{% url 'checkout' %}">Track Your Order</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1004,16 +1004,16 @@
                                     <h2 class="widgettitle">Online Shopping for Mobiles</h2>
                                     <div class="menu-online-shopping-for-mobiles-container">
                                         <ul>
-                                            <li><a href="checkout">Samsung Mobiles</a></li>
-                                            <li><a href="checkout">Micromax Mobiles</a></li>
-                                            <li><a href="checkout">Lenovo Mobiles</a></li>
-                                            <li><a href="checkout">HTC Mobiles</a></li>
-                                            <li><a href="checkout">iPhones</a></li>
-                                            <li><a href="checkout">LG Mobiles</a></li>
-                                            <li><a href="checkout">Karbonn Mobiles</a></li>
-                                            <li><a href="checkout">Vivo Mobiles</a></li>
-                                            <li><a href="checkout">Asus Mobiles</a></li>
-                                            <li><a href="checkout">Oppo Mobiles</a></li>
+                                            <li><a href="{% url 'checkout' %}">Samsung Mobiles</a></li>
+                                            <li><a href="{% url 'checkout' %}">Micromax Mobiles</a></li>
+                                            <li><a href="{% url 'checkout' %}">Lenovo Mobiles</a></li>
+                                            <li><a href="{% url 'checkout' %}">HTC Mobiles</a></li>
+                                            <li><a href="{% url 'checkout' %}">iPhones</a></li>
+                                            <li><a href="{% url 'checkout' %}">LG Mobiles</a></li>
+                                            <li><a href="{% url 'checkout' %}">Karbonn Mobiles</a></li>
+                                            <li><a href="{% url 'checkout' %}">Vivo Mobiles</a></li>
+                                            <li><a href="{% url 'checkout' %}">Asus Mobiles</a></li>
+                                            <li><a href="{% url 'checkout' %}">Oppo Mobiles</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1021,14 +1021,14 @@
                                     <h2 class="widgettitle">Tablets</h2>
                                     <div class="menu-online-shopping-for-mobiles-container">
                                         <ul>
-                                            <li><a href="checkout">Apple iPads</a></li>
-                                            <li><a href="checkout">Samsung Tablets</a></li>
-                                            <li><a href="checkout"> Windows Tablets</a></li>
-                                            <li><a href="checkout">Calling Tablets</a></li>
-                                            <li><a href="checkout">Micromax Tablets</a></li>
-                                            <li><a href="checkout">iBall Tablets</a></li>
-                                            <li><a href="checkout">Swipe Tablets</a></li>
-                                            <li><a href="checkout">Datawind Tablets</a></li>
+                                            <li><a href="{% url 'checkout' %}">Apple iPads</a></li>
+                                            <li><a href="{% url 'checkout' %}">Samsung Tablets</a></li>
+                                            <li><a href="{% url 'checkout' %}"> Windows Tablets</a></li>
+                                            <li><a href="{% url 'checkout' %}">Calling Tablets</a></li>
+                                            <li><a href="{% url 'checkout' %}">Micromax Tablets</a></li>
+                                            <li><a href="{% url 'checkout' %}">iBall Tablets</a></li>
+                                            <li><a href="{% url 'checkout' %}">Swipe Tablets</a></li>
+                                            <li><a href="{% url 'checkout' %}">Datawind Tablets</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1036,16 +1036,16 @@
                                     <h2 class="widgettitle">TVs, Audio & Video</h2>
                                     <div class="menu-online-shopping-for-mobiles-container">
                                         <ul>
-                                            <li><a href="checkout">Televisions</a></li>
-                                            <li><a href="checkout">LED TVs</a></li>
-                                            <li><a href="checkout">Smart Televisions</a></li>
-                                            <li><a href="checkout">Speakers</a></li>
-                                            <li><a href="checkout">Headphones</a></li>
-                                            <li><a href="checkout">Earphones</a></li>
-                                            <li><a href="checkout">Samsung Televisions</a></li>
-                                            <li><a href="checkout">Micromax Televisions</a></li>
-                                            <li><a href="checkout">LG Televisions</a></li>
-                                            <li><a href="checkout">Home Theatre Systems</a></li>
+                                            <li><a href="{% url 'checkout' %}">Televisions</a></li>
+                                            <li><a href="{% url 'checkout' %}">LED TVs</a></li>
+                                            <li><a href="{% url 'checkout' %}">Smart Televisions</a></li>
+                                            <li><a href="{% url 'checkout' %}">Speakers</a></li>
+                                            <li><a href="{% url 'checkout' %}">Headphones</a></li>
+                                            <li><a href="{% url 'checkout' %}">Earphones</a></li>
+                                            <li><a href="{% url 'checkout' %}">Samsung Televisions</a></li>
+                                            <li><a href="{% url 'checkout' %}">Micromax Televisions</a></li>
+                                            <li><a href="{% url 'checkout' %}">LG Televisions</a></li>
+                                            <li><a href="{% url 'checkout' %}">Home Theatre Systems</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1053,14 +1053,14 @@
                                     <h2 class="widgettitle">Mobiles Accessories</h2>
                                     <div class="menu-online-shopping-for-mobiles-container">
                                         <ul>
-                                            <li><a href="checkout">Mobile Covers</a></li>
-                                            <li><a href="checkout">Power Banks</a></li>
-                                            <li><a href="checkout">Samsung Power Banks</a></li>
-                                            <li><a href="checkout">Ambrane Power Banks</a></li>
-                                            <li><a href="checkout">Intex Power Banks</a></li>
-                                            <li><a href="checkout">Sony Power Banks</a></li>
-                                            <li><a href="checkout">Lenovo Power Banks</a></li>
-                                            <li><a href="checkout">PNY Power Banks</a></li>
+                                            <li><a href="{% url 'checkout' %}">Mobile Covers</a></li>
+                                            <li><a href="{% url 'checkout' %}">Power Banks</a></li>
+                                            <li><a href="{% url 'checkout' %}">Samsung Power Banks</a></li>
+                                            <li><a href="{% url 'checkout' %}">Ambrane Power Banks</a></li>
+                                            <li><a href="{% url 'checkout' %}">Intex Power Banks</a></li>
+                                            <li><a href="{% url 'checkout' %}">Sony Power Banks</a></li>
+                                            <li><a href="{% url 'checkout' %}">Lenovo Power Banks</a></li>
+                                            <li><a href="{% url 'checkout' %}">PNY Power Banks</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1068,15 +1068,15 @@
                                     <h2 class="widgettitle">Computers</h2>
                                     <div class="menu-online-shopping-for-mobiles-container">
                                         <ul>
-                                            <li><a href="checkout">Lenovo Laptops</a></li>
-                                            <li><a href="checkout">Acer Laptops</a></li>
-                                            <li><a href="checkout">Apple Macbooks</a></li>
-                                            <li><a href="checkout">Notebook</a></li>
-                                            <li><a href="checkout">Laptops</a></li>
-                                            <li><a href="checkout">External Hard Disks</a></li>
-                                            <li><a href="checkout">Dell Laptops</a></li>
-                                            <li><a href="checkout">HP Laptops</a></li>
-                                            <li><a href="checkout">Pen Drives</a></li>
+                                            <li><a href="{% url 'checkout' %}">Lenovo Laptops</a></li>
+                                            <li><a href="{% url 'checkout' %}">Acer Laptops</a></li>
+                                            <li><a href="{% url 'checkout' %}">Apple Macbooks</a></li>
+                                            <li><a href="{% url 'checkout' %}">Notebook</a></li>
+                                            <li><a href="{% url 'checkout' %}">Laptops</a></li>
+                                            <li><a href="{% url 'checkout' %}">External Hard Disks</a></li>
+                                            <li><a href="{% url 'checkout' %}">Dell Laptops</a></li>
+                                            <li><a href="{% url 'checkout' %}">HP Laptops</a></li>
+                                            <li><a href="{% url 'checkout' %}">Pen Drives</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1084,14 +1084,14 @@
                                     <h2 class="widgettitle">Camera</h2>
                                     <div class="menu-online-shopping-for-mobiles-container">
                                         <ul>
-                                            <li><a href="checkout">DSLR Cameras</a></li>
-                                            <li><a href="checkout">Canon Cameras</a></li>
-                                            <li><a href="checkout">Nikon Coolpix</a></li>
-                                            <li><a href="checkout">Nikon DSLR Cameras</a></li>
-                                            <li><a href="checkout">Nikon DSLR Cameras</a></li>
-                                            <li><a href="checkout">Digital Cameras</a></li>
-                                            <li><a href="checkout">Panasonic Cameras</a></li>
-                                            <li><a href="checkout">Samsung Cameras</a></li>
+                                            <li><a href="{% url 'checkout' %}">DSLR Cameras</a></li>
+                                            <li><a href="{% url 'checkout' %}">Canon Cameras</a></li>
+                                            <li><a href="{% url 'checkout' %}">Nikon Coolpix</a></li>
+                                            <li><a href="{% url 'checkout' %}">Nikon DSLR Cameras</a></li>
+                                            <li><a href="{% url 'checkout' %}">Nikon DSLR Cameras</a></li>
+                                            <li><a href="{% url 'checkout' %}">Digital Cameras</a></li>
+                                            <li><a href="{% url 'checkout' %}">Panasonic Cameras</a></li>
+                                            <li><a href="{% url 'checkout' %}">Samsung Cameras</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1099,14 +1099,14 @@
                                     <h2 class="widgettitle">Watches</h2>
                                     <div class="menu-online-shopping-for-mobiles-container">
                                         <ul>
-                                            <li><a href="checkout">Men’s Watches</a></li>
-                                            <li><a href="checkout">Women’s Watches</a></li>
-                                            <li><a href="checkout">Casio Watches</a></li>
-                                            <li><a href="checkout">Titan Watches</a></li>
-                                            <li><a href="checkout">Fastrack Watches</a></li>
-                                            <li><a href="checkout">Fossil watches</a></li>
-                                            <li><a href="checkout">Casio Edifice</a></li>
-                                            <li><a href="checkout">Tissot Watches</a></li>
+                                            <li><a href="{% url 'checkout' %}">Men’s Watches</a></li>
+                                            <li><a href="{% url 'checkout' %}">Women’s Watches</a></li>
+                                            <li><a href="{% url 'checkout' %}">Casio Watches</a></li>
+                                            <li><a href="{% url 'checkout' %}">Titan Watches</a></li>
+                                            <li><a href="{% url 'checkout' %}">Fastrack Watches</a></li>
+                                            <li><a href="{% url 'checkout' %}">Fossil watches</a></li>
+                                            <li><a href="{% url 'checkout' %}">Casio Edifice</a></li>
+                                            <li><a href="{% url 'checkout' %}">Tissot Watches</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1114,16 +1114,16 @@
                                     <h2 class="widgettitle">Appliances</h2>
                                     <div class="menu-online-shopping-for-mobiles-container">
                                         <ul>
-                                            <li><a href="checkout">Air Conditioners</a></li>
-                                            <li><a href="checkout">Air Coolers</a></li>
-                                            <li><a href="checkout">Refrigerators</a></li>
-                                            <li><a href="checkout">Fans</a></li>
-                                            <li><a href="checkout">Washing Machines</a></li>
-                                            <li><a href="checkout">Inverters & Stabilizers</a></li>
-                                            <li><a href="checkout">Mircowaves</a></li>
-                                            <li><a href="checkout">Irons</a></li>
-                                            <li><a href="checkout">Trimmers</a></li>
-                                            <li><a href="checkout">Hair Dryers</a></li>
+                                            <li><a href="{% url 'checkout' %}">Air Conditioners</a></li>
+                                            <li><a href="{% url 'checkout' %}">Air Coolers</a></li>
+                                            <li><a href="{% url 'checkout' %}">Refrigerators</a></li>
+                                            <li><a href="{% url 'checkout' %}">Fans</a></li>
+                                            <li><a href="{% url 'checkout' %}">Washing Machines</a></li>
+                                            <li><a href="{% url 'checkout' %}">Inverters & Stabilizers</a></li>
+                                            <li><a href="{% url 'checkout' %}">Mircowaves</a></li>
+                                            <li><a href="{% url 'checkout' %}">Irons</a></li>
+                                            <li><a href="{% url 'checkout' %}">Trimmers</a></li>
+                                            <li><a href="{% url 'checkout' %}">Hair Dryers</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1260,11 +1260,11 @@
                                                             <a class="add-cart" href="cart">add to cart</a>
                                                         </div>
                                                         <div class="wishlist-compear-area">
-                                                            <a href="wishlist"><i class="ion-ios-heart-outline"></i> Add to Wishlist</a>
-                                                            <a href="checkout"><i class="ion-ios-loop-strong"></i> Compare</a>
+                                                            <a href="{% url 'wishlist' %}"><i class="ion-ios-heart-outline"></i> Add to Wishlist</a>
+                                                            <a href="{% url 'checkout' %}"><i class="ion-ios-loop-strong"></i> Compare</a>
                                                         </div>
                                                         <div class="product_meta">
-                                                            <span class="posted_in">Categories: <a href="checkout" rel="tag">Accessories</a>, <a href="checkout" rel="tag">Clothings</a></span>
+                                                            <span class="posted_in">Categories: <a href="{% url 'checkout' %}" rel="tag">Accessories</a>, <a href="{% url 'checkout' %}" rel="tag">Clothings</a></span>
                                                         </div>
                                                         <div class="single-product-sharing">
                                                             <div class="widget widget_socialsharing_widget">
