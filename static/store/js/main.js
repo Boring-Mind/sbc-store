@@ -22,6 +22,7 @@
         $('.categori-menu-list').slideToggle();
     });
 
+    $('.categori-menu-list').slideUp();
     /* ----------------------------------------------
         gallery-post active
     ---------------------------------------------- */

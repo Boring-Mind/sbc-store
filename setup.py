@@ -14,6 +14,5 @@ setup(
         'python-decouple>=3.3',
         'psycopg2-binary>=2.8.0',
         'dj-database-url>=0.5.0',
-        'selenium>=3.0',
     ]
 )
