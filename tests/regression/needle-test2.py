@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.support import expected_conditions as EC
 
 from time import perf_counter
 
@@ -22,6 +23,21 @@ class element_is_not_visible(object):
             return False
         else:
             return element
+
+# product-details-small nav product-dec-slider-qui owl-carousel owl-loaded owl-drag
+def wait_for_product_carousel(driver: webdriver, delay=3):
+    try:
+        element_visible = EC.presence_of_element_located(
+            (
+                By.CLASS_NAME, 'product-details-small nav product-dec-slider-qui' +
+                'owl-carousel owl-loaded owl-drag'
+            )
+        )
+        WebDriverWait(driver, delay).until(
+            element_visible
+        )
+    except TimeoutException:
+        print('Page loading took too much time')
 
 
 def wait_for_menu(driver: webdriver, delay=3):
@@ -111,5 +127,22 @@ def regression_test(pagename="index", url=""):
         driver.quit()
 
 
+@benchmark
+def regression_test_owl(pagename="index", url=""):
+    try:
+        driver = get_chrome_driver()
+        driver.get(r'http://127.0.0.1:8000/' + url)
+        take_full_page_screenshot(
+            driver,
+            pagename,
+            wait_func=wait_for_product_carousel
+        )
+    except Exception as e:
+        raise e
+    finally:
+        driver.quit()
+
+
 if __name__ == '__main__':
-    regression_test('login', 'login/')
+    # regression_test('login', 'login/')
+    regression_test_owl()
