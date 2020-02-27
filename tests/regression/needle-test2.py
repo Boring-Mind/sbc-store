@@ -56,7 +56,7 @@ def take_full_page_screenshot(
     """Get full page screenshot.
 
     file_name - name of output screenshot file, without .jpg or .png extension
-    wait_func - function, which implements imlicit wait for selenium
+    wait_func - function, which implements explicit wait for selenium
     page_width - browser screen width
 
     Screenshots are saved in the same folder with script.
