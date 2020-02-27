@@ -1,12 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+# from django.http import HttpResponse
 
 # write unit and functional test to all of these views
-
-handler404 = 'store.apps.pages.views.page_not_found_handler'
-
-def page_not_found_handler(request, exception=None):
-	return HttpResponse('Page not found', status='404')
 
 
 def home_page_view(request):
@@ -14,9 +9,6 @@ def home_page_view(request):
 
 def about_view(request):
 	return render(request, 'about-us.html')
-
-def blog_view(request):
-	return render(request, 'blog.html')
 
 def cart_view(request):
 	return render(request, 'cart.html')
@@ -42,13 +34,13 @@ def my_account_view(request):
 def register_view(request):
 	return render(request, 'register.html')
 
-def service_view(request):
-	return render(request, 'service.html')
-
 def shop_view(request):
 	return render(request, 'shop.html')
 
-def single_product_view(request):
+def shop_list_view(request):
+	return render(request, 'shop-list.html')
+
+def product_view(request):
 	return render(request, 'single-product.html')
 
 def wishlist_view(request):
