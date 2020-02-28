@@ -2759,7 +2759,7 @@ li.megamenu-img a {
 /* ----------------------------------------------
     13. Single Product Page
 ---------------------------------------------- */
-.single-product-page .menu-hidden {
+.menu-hidden {
     display: none;
 }
 

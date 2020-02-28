@@ -5,6 +5,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 
 from time import perf_counter
+from time import sleep
 
 
 class element_is_not_visible(object):
@@ -23,21 +24,6 @@ class element_is_not_visible(object):
             return False
         else:
             return element
-
-# product-details-small nav product-dec-slider-qui owl-carousel owl-loaded owl-drag
-def wait_for_product_carousel(driver: webdriver, delay=3):
-    try:
-        element_visible = EC.presence_of_element_located(
-            (
-                By.CLASS_NAME, 'product-details-small nav product-dec-slider-qui' +
-                'owl-carousel owl-loaded owl-drag'
-            )
-        )
-        WebDriverWait(driver, delay).until(
-            element_visible
-        )
-    except TimeoutException:
-        print('Page loading took too much time')
 
 
 def wait_for_menu(driver: webdriver, delay=3):
@@ -66,7 +52,7 @@ def get_page_height(driver: webdriver) -> int:
 def take_full_page_screenshot(
     driver: webdriver,
     file_name="screenshot",
-    wait_func=wait_for_menu,
+    wait_func=None,
     page_width=1920
 ):
     """Get full page screenshot.
@@ -81,7 +67,8 @@ def take_full_page_screenshot(
     page_height = get_page_height(driver)
     driver.set_window_size(page_width, page_height)
 
-    wait_func(driver)
+    if wait_func is not None:
+        wait_func(driver)
 
     driver.find_element_by_tag_name('body').screenshot(file_name + ".png")
 
@@ -120,23 +107,8 @@ def regression_test(pagename="index", url=""):
     try:
         driver = get_chrome_driver()
         driver.get(r'http://127.0.0.1:8000/' + url)
-        take_full_page_screenshot(driver, pagename)
-    except Exception as e:
-        raise e
-    finally:
-        driver.quit()
-
-
-@benchmark
-def regression_test_owl(pagename="index", url=""):
-    try:
-        driver = get_chrome_driver()
-        driver.get(r'http://127.0.0.1:8000/' + url)
-        take_full_page_screenshot(
-            driver,
-            pagename,
-            wait_func=wait_for_product_carousel
-        )
+        sleep(1)
+        take_full_page_screenshot(driver=driver, file_name=pagename)
     except Exception as e:
         raise e
     finally:
@@ -145,4 +117,4 @@ def regression_test_owl(pagename="index", url=""):
 
 if __name__ == '__main__':
     # regression_test('login', 'login/')
-    regression_test_owl()
+    regression_test()
