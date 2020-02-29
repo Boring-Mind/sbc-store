@@ -1,11 +1,11 @@
+from time import perf_counter
+from time import sleep
+
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
-
-from time import perf_counter
-from time import sleep
 
 
 class element_is_not_visible(object):
