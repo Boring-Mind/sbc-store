@@ -88,15 +88,16 @@ def get_firefox_driver() -> webdriver:
     return webdriver.Firefox(options=options)
 
 
-def benchmark(function, *params):
+def benchmark(function):
     """Decorator. Benchmarks function and prints elapsed time.
 
     function - function to be benchmarked
-    *params - parameters, passed to wrapped function
     """
-    def wrapper(*params):
+    def wrapper(*args, **kwargs):
+        print(args)
+        print(kwargs)
         time1 = perf_counter()
-        function(*params)
+        function(*args, **kwargs)
         time2 = perf_counter()
         print(time2 - time1)
     return wrapper
