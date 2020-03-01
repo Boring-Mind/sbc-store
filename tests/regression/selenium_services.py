@@ -19,18 +19,58 @@ def get_page_height(driver: webdriver) -> int:
     ))
 
 
+def take_screenshot(
+    driver: webdriver,
+    file_name: str,
+    wait_func=None,
+    page_width=1920,
+    baseline=False
+):
+    """Create path for saving screenshots and call take_full_page_screenshot.
+    
+    file_name - name of screenshot file, that would be saved (without .png)
+    wait_func - function, which implements explicit wait for selenium
+    page_width - browser screen width
+    baseline - True to save images to baseline folder
+    
+    Main goal of this function - reduce complexity
+    of the take_full_page_screenshot function.
+    """
+    folder = SCREENSHOTS_DIR
+    if baseline is True:
+        folder = BASELINE_DIR
+
+    if not os.path.exists(folder):
+        try:
+            os.mkdir(folder)
+        except OSError:
+            print("Failed to create directory. "
+                  f"Path to the directory: {folder}"
+                  )
+
+    path_to_screenshot = os.path.join(folder, f"{file_name}.png")
+
+    take_full_page_screenshot(
+        driver=driver,
+        file_path=path_to_screenshot,
+        wait_func=wait_func,
+        page_width=page_width
+    )
+
+
 def take_full_page_screenshot(
     driver: webdriver,
-    file_name="screenshot",
-    wait_func=None,
-    page_width=1920
+    file_path: str,
+    wait_func: callable,
+    page_width: int,
 ):
     """Get full page screenshot.
 
-    file_name - name of output screenshot file, without .jpg or .png extension
+    file_path - full path to the screenshot file,
+                that would be saved (with .png)
     wait_func - function, which implements explicit wait for selenium
     page_width - browser screen width
-
+    
     Screenshots are saved in the same folder with script.
     Files have png format.
     """
@@ -40,19 +80,7 @@ def take_full_page_screenshot(
     if wait_func is not None:
         wait_func(driver)
 
-    screenshots_dir = './screenshots/'
-
-    if not os.path.exists(screenshots_dir):
-        try:
-            os.mkdir(screenshots_dir)
-        except OSError:
-            print("Failed to create screenshots directory. " +
-                  f"Path to the directory: {screenshots_dir}"
-                  )
-
-    driver.find_element_by_tag_name('body').screenshot(
-        screenshots_dir + file_name + ".png"
-    )
+    driver.find_element_by_tag_name('body').screenshot(file_path)
 
 
 if __name__ == '__main__':
@@ -61,9 +89,10 @@ if __name__ == '__main__':
     options.add_argument("--start-maximized")
     driver = webdriver.Chrome(options=options)
 
-    filename = './screenshots/test'
-
-    driver.get(r'http://127.0.0.1:8000/')
+    driver.get('http://127.0.0.1:8000/login/')
     sleep(1)
 
-    take_full_page_screenshot(driver, filename)
+    try:
+        take_screenshot(driver, file_name='login', baseline=True)
+    finally:
+        driver.quit()
