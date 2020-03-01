@@ -94,8 +94,6 @@ def benchmark(function):
     function - function to be benchmarked
     """
     def wrapper(*args, **kwargs):
-        print(args)
-        print(kwargs)
         time1 = perf_counter()
         function(*args, **kwargs)
         time2 = perf_counter()
