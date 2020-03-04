@@ -113,22 +113,19 @@ class PageLayoutTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) > 1:
-        argument = sys.argv.pop()
-        if argument == '--with-save-baseline':
-            print('Save baseline mode activated')
-            PageLayoutTest.SAVE_BASELINE = True
-            unittest.main()
-        elif argument == '-h':
-            print('List of arguments:')
-            print('----------------------')
-            print('--with-save-baseline: Generate reference images '
-                  'and save it to the baseline folder'
-                  )
-        elif argument[:14] == 'PageLayoutTest':
-            unittest.main()
-        else:
-            print(f'Unknown argument: {argument}')
-            print('Please, try again')
+    arg_list = sys.argv
+    if '-h' in arg_list:
+        print('List of arguments:')
+        print('----------------------')
+        print('--with-save-baseline: Generate reference images '
+              'and save it to the baseline folder'
+              )
+    elif '--with-save-baseline' in arg_list:
+        # Remove baseline argument, because it cannot be recognized
+        # by unittest framework
+        sys.argv.remove('--with-save-baseline')
+        print('Save baseline mode activated')
+        PageLayoutTest.SAVE_BASELINE = True
+        unittest.main()
     else:
         unittest.main()

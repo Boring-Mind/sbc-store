@@ -78,7 +78,26 @@ def take_full_page_screenshot(
     driver.set_window_size(page_width, page_height)
 
     if wait_func is not None:
-        wait_func(driver)
+        try:
+            wait_func(driver)
+        except AttributeError:
+            print('Module \"selenium_services\"\n'
+                  'Method \"take_full_page_screenshot\":\n'
+                  'Failed to call wait function.\n'
+                  'Rolling back to default selenium wait.\n'
+                  'Some complicated pages with js or lazy load '
+                  'may not have time to load all content before '
+                  'screenshot is taken.'
+                  )
+    else:
+        print('Module \"selenium_services\"\n'
+              'Method \"take_full_page_screenshot\":\n'
+              'There is no wait function defined. '
+              'Rolling back to default selenium wait.\n'
+              'Some complicated pages with js or lazy load '
+              'may not have time to load all content before '
+              'screenshot is taken.'
+              )
 
     driver.find_element_by_tag_name('body').screenshot(file_path)
 

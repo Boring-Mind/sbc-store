@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'store.wsgi.application'
 
 DATABASE_URL = config('DB_URL')
 
-if db_url_is_valid(DATABASE_URL) is False:
+if not db_url_is_valid(DATABASE_URL):
     error_msg = "Set the DB_URL environment variable properly"
     raise ImproperlyConfigured(error_msg)
 
