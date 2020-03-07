@@ -50,12 +50,6 @@ class PageLayoutTest(unittest.TestCase):
     def test_index_page_has_valid_layout(self):
         self.default_page_layout_test(img_name='index', url='')
 
-    # def test_about_page_has_valid_layout(self):
-    #     self.driver.get(r'http://127.0.0.1:8000/about')
-    #     selenium_services.take_full_page_screenshot(
-    #         self.driver, 'about', baseline=self.SAVE_BASELINE
-    #     )
-
     def test_about_page_has_valid_layout(self):
         self.default_page_layout_test(img_name='about', url='about')
 
