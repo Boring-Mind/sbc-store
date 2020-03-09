@@ -40,6 +40,7 @@ class SeleniumService:
     def __init__(
         self,
         driver: webdriver,
+        url: str,
         img_name: str,
         page_width=1920,
         baseline=False,
@@ -47,16 +48,42 @@ class SeleniumService:
     ):
         """Initialize class object.
 
-        file_name - name of screenshot file, that would be saved (without .png)
-        wait_func - function, which implements explicit wait for selenium
+        url - url of the tested page (http://your_site/page)
+        img_name - name of screenshot file, that would be saved (without .png)
         page_width - browser screen width
         baseline - True to save images to baseline folder
+        wait - function, which implements explicit wait for selenium
         """
         self.driver = driver
+        self.url = url
         self.img_name = img_name
         self.page_width = page_width
         self.folder = SeleniumService.get_images_folder(baseline)
         self.wait = wait
+
+    def get_full_page_screenshot(self):
+        """Main function of the class.
+
+        Describes recommended workflow with class.
+        """
+        self.create_images_directory()
+        self.set_viewport()
+        self.go_to_the_webpage()
+        self.browser_set_fullscreen()
+        self.wait_function()
+        self.take_screenshot()
+
+    def set_viewport(self):
+        """Set default page size.
+
+        Needed to set proper page size.
+        """
+        self.driver.set_window_size(
+            self.page_width, self.page_width / (16 // 9)
+        )
+
+    def go_to_the_webpage(self):
+        self.driver.get(self.url)
 
     def get_page_height(self) -> int:
         """Get full height of webpage."""
@@ -116,12 +143,6 @@ class SeleniumService:
         screenshot_path = self.get_path_to_screenshot()
         body_element = self.driver.find_element_by_tag_name('body')
         body_element.screenshot(screenshot_path)
-
-    def get_full_page_screenshot(self):
-        self.create_images_directory()
-        self.browser_set_fullscreen()
-        self.wait_function()
-        self.take_screenshot()
 
 
 if __name__ == '__main__':

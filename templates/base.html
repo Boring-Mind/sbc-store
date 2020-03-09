@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Bege || Home</title>
+        <title>Bege || {% block title %}Home{% endblock title %}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load static %}
@@ -29,7 +29,7 @@
         <!-- Add your site or application content here -->
 
         <!-- Body main wrapper start -->
-        <div class="wrapper home-one">
+        <div class="wrapper home-one {% block single-product-page %}{% endblock single-product-page %}">
             <!-- HEADER AREA START -->
             <header class="header-area">
                 {% block header-top %}
@@ -861,31 +861,31 @@
                                                                 <a class="active" href="index.html#pro-details1">
                                                                     <img src="{% static "img/product/thumbnails/product4.jpg" %}" alt="">
                                                                 </a>
-                                                                <a href="index.html#pro-details2">
+                                                                <a href="#pro-details2">
                                                                     <img src="{% static "img/product/thumbnails/product5.jpg" %}" alt="">
                                                                 </a>
-                                                                <a href="index.html#pro-details3">
+                                                                <a href="#pro-details3">
                                                                     <img src="{% static "img/product/thumbnails/product6.jpg" %}" alt="">
                                                                 </a>
-                                                                <a href="index.html#pro-details4">
+                                                                <a href="#pro-details4">
                                                                     <img src="{% static "img/product/thumbnails/product7.jpg" %}" alt="">
                                                                 </a>
-                                                                <a href="index.html#pro-details5">
+                                                                <a href="#pro-details5">
                                                                     <img src="{% static "img/product/thumbnails/product8.jpg" %}" alt="">
                                                                 </a>
                                                                 <a class="active" href="index.html#pro-details1">
                                                                     <img src="{% static "img/product/thumbnails/product4.jpg" %}" alt="">
                                                                 </a>
-                                                                <a href="index.html#pro-details2">
+                                                                <a href="#pro-details2">
                                                                     <img src="{% static "img/product/thumbnails/product5.jpg" %}" alt="">
                                                                 </a>
-                                                                <a href="index.html#pro-details3">
+                                                                <a href="#pro-details3">
                                                                     <img src="{% static "img/product/thumbnails/product6.jpg" %}" alt="">
                                                                 </a>
-                                                                <a href="index.html#pro-details4">
+                                                                <a href="#pro-details4">
                                                                     <img src="{% static "img/product/thumbnails/product7.jpg" %}" alt="">
                                                                 </a>
-                                                                <a href="index.html#pro-details5">
+                                                                <a href="#pro-details5">
                                                                     <img src="{% static "img/product/thumbnails/product8.jpg" %}" alt="">
                                                                 </a>
                                                             </div>

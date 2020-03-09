@@ -31,13 +31,13 @@ class PageLayoutTest(unittest.TestCase):
 
         img_name - name of the image file.
                    Must be same for baseline and test images.
-        url: str - relative url to the tested page (http://domain_name/url/)
+        url: str - relative url to the tested page (http://domain_name/{url}/)
         """
-        self.driver.get(f'http://127.0.0.1:8000/{url}')
         selenium_service = SeleniumService(
             driver=self.driver,
             img_name=img_name,
-            baseline=self.SAVE_BASELINE
+            baseline=self.SAVE_BASELINE,
+            url=f'http://127.0.0.1:8000/{url}'
         )
         selenium_service.get_full_page_screenshot()
         if not self.SAVE_BASELINE:
