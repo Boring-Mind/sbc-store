@@ -79,7 +79,7 @@ class SeleniumService:
         Needed to set proper page size.
         """
         self.driver.set_window_size(
-            self.page_width, self.page_width / (16 // 9)
+            self.page_width, int(self.page_width / (16 / 9))
         )
 
     def go_to_the_webpage(self):
