@@ -207,7 +207,7 @@
                                 <div class="categori-menu">
                                 <span class="categorie-title">Categories</span>
                                 <nav>
-                                    <ul class="categori-menu-list menu-hidden">
+                                    <ul class="categori-menu-list {% block sidebar-shown %}menu-hidden{% endblock sidebar-shown %}">
                                         <li><a href="{% url 'shop' %}"><span><img src="{% static "img/icons/1.png" %}" alt="menu-icon"></span>Electronics<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                             <!-- categori Mega-Menu Start -->
                                             <ul class="ht-dropdown megamenu first-megamenu">
@@ -450,7 +450,7 @@
                                                             <ul>
                                                                 <li><a href="{% url 'about' %}">About Us</a></li>
                                                                 <li><a href="">Services</a></li>
- -->                                                                <li><a href="portfolio">Portfolio</a></li>
+                                                                <li><a href="portfolio">Portfolio</a></li>
                                                                 <li><a href="{% url 'faq' %}">Frequently Questins</a></li>
                                                                 <li><a href="404">Error 404</a></li>
                                                             </ul>
@@ -957,11 +957,8 @@
         <script defer src="{% static "js/popper.min.js" %}"></script>
         <!-- Bootstrap min js  -->
         <script defer src="{% static "js/bootstrap.min.js" %}"></script>
-        {% block nivo-js %}
-        <!-- "Delete this NOW" -->
-        <!-- nivo slider pack js  -->
-        <script defer src="{% static "js/jquery.nivo.slider.pack.js" %}"></script>
-        {% endblock nivo-js %}
+        {% block unique-scripts %}
+        {% endblock unique-scripts %}
         <!-- All plugins here -->
         <script defer src="{% static "js/plugins.js" %}"></script>
         <!-- Main js  -->
