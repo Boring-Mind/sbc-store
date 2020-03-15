@@ -9,6 +9,12 @@ from selenium_services import SeleniumService
 from imagemagick_services import screenshots_equal
 
 
+class Waits:
+    def time_delay(delay: float):
+        """delay: time in seconds"""
+        time.sleep(delay)
+
+
 class PageLayoutTest(unittest.TestCase):
 
     SAVE_BASELINE = False
@@ -25,19 +31,25 @@ class PageLayoutTest(unittest.TestCase):
         self.driver.quit()
 
     def default_page_layout_test(
-            self, img_name: str, url=''
+            self,
+            img_name: str,
+            url='',
+            wait_func=None
     ):
         """Test equality of test and reference images.
 
         img_name - name of the image file.
                    Must be same for baseline and test images.
         url: str - relative url to the tested page (http://domain_name/{url}/)
+        wait_func: function, which is used to check,
+                   that all elements on the page are loaded
         """
         selenium_service = SeleniumService(
             driver=self.driver,
             img_name=img_name,
             baseline=self.SAVE_BASELINE,
-            url=f'http://127.0.0.1:8000/{url}'
+            url=f'http://127.0.0.1:8000/{url}',
+            wait=wait_func
         )
         selenium_service.get_full_page_screenshot()
         if not self.SAVE_BASELINE:
@@ -60,7 +72,11 @@ class PageLayoutTest(unittest.TestCase):
         self.default_page_layout_test(img_name='checkout', url='checkout')
 
     def test_contact_page_has_valid_layout(self):
-        self.default_page_layout_test(img_name='contact', url='contact')
+        self.default_page_layout_test(
+            img_name='contact',
+            url='contact'
+            # wait_func=Waits.time_delay(2)
+        )
 
     def test_faq_page_has_valid_layout(self):
         self.default_page_layout_test(img_name='faq', url='faq')

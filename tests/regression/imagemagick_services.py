@@ -37,7 +37,6 @@ def screenshots_equal(img_name: str) -> bool:
             diff_image.save(
                 filename=filename
             )
-
         return False
     else:
         return True
